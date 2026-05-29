@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Radon Testing | Licensed Radon Testing in St. Charles &amp; the Fox Valley</title>
+<style>
+  :root{
+    --ink:#0f2a33; --teal:#0e8f8f; --teal-dk:#0a6e6e; --slate:#14323c; --slate2:#1b414d;
+    --light:#eef6f6; --line:#dde9e9; --amber:#f4a52a; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#15323a;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(14,143,143,.32);}
+  .btn-teal:hover{background:var(--teal-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--ink);color:#bfe0e0;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--slate);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--teal);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#063f3f);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px;}
+  .logo .name{color:#fff;font-weight:800;font-size:18px;letter-spacing:.4px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:11px;color:#9cc2c2;letter-spacing:1.5px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:26px;align-items:center;}
+  .navlinks a{color:#cfe3e3;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{background:linear-gradient(rgba(9,27,33,.84),rgba(9,27,33,.9)),linear-gradient(135deg,#1b414d,#0f2a33);color:#fff;}
+  .hero .wrap{padding:84px 24px 90px;}
+  .eyebrow{display:inline-block;background:rgba(14,143,143,.2);color:#6fd6d6;border:1px solid rgba(14,143,143,.5);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:740px;margin-bottom:18px;}
+  .hero h1 span{color:var(--teal);}
+  .hero p.sub{font-size:18px;color:#b7cccc;max-width:600px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .hero .price{color:#fff;font-weight:700;font-size:15px;opacity:.9;}
+  .hero .stats{display:flex;gap:44px;margin-top:50px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12.5px;color:#9cc2c2;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--teal);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  .trust .wrap span{display:flex;align-items:center;gap:9px;}
+  section{padding:78px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 48px;}
+  .sec-head .k{color:var(--teal);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:36px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#4f6b6b;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.2s;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,42,51,.10);border-color:#cadddd;}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:26px;}
+  .card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#4f6b6b;font-size:15px;}
+  .card .price{display:inline-block;margin-top:12px;background:var(--light);color:var(--teal-dk);font-weight:800;font-size:14px;padding:4px 12px;border-radius:20px;}
+  .how{background:var(--light);}
+  .how .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;}
+  .step .n{width:40px;height:40px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px;}
+  .step h3{font-size:18px;color:var(--ink);margin-bottom:6px;}
+  .step p{color:#4f6b6b;font-size:15px;}
+  .book{background:linear-gradient(135deg,var(--ink),var(--slate2));color:#fff;text-align:center;}
+  .book h2{font-size:34px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#b7cccc;font-size:18px;max-width:540px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;}
+  .stars{color:var(--amber);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#4f6b6b;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14.5px;}
+  footer{background:#0a2026;color:#9cc2c2;padding:52px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:34px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#9cc2c2;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #16363f;padding-top:20px;text-align:center;font-size:13px;color:#688;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.how .grid{grid-template-columns:1fr;}.hero h1{font-size:36px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Local Radon Testing by Foundry Line &nbsp;&bull;&nbsp; Copy &amp; photos are placeholders, ready to swap in your real ones</div>
+
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Licensed Professional Radon Testing</span> &nbsp; Serving St. Charles &amp; the Fox Valley</div>
+  <div><span class="badge">Call: 630-881-2430</span></div>
+</div></div>
+
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">R</div><div class="name">LOCAL RADON TESTING<small>St. Charles, IL</small></div></div>
+  <div class="navlinks">
+    <a href="#services">Services</a><a href="#how">How It Works</a><a href="#reviews">Reviews</a><a href="#book">Schedule</a>
+    <a href="#book" class="btn btn-teal" style="padding:10px 20px;">Schedule a Test</a>
+  </div>
+</nav></header>
+
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Healthier Homes, Fox Valley</span>
+  <h1>Is radon putting your family <span>at risk?</span> Find out in days.</h1>
+  <p class="sub">Radon is the second leading cause of lung cancer, and it's invisible. We provide fast, licensed, professional radon testing for homeowners and real estate transactions across St. Charles and the Fox Valley.</p>
+  <div class="cta">
+    <a href="#book" class="btn btn-teal">Schedule Your Test</a>
+    <a href="tel:6308812430" class="btn btn-ghost">Call 630-881-2430</a>
+    <span class="price">Home tests from $135</span>
+  </div>
+  <div class="stats">
+    <div class="s"><b>48hr</b><span>Typical Turnaround</span></div>
+    <div class="s"><b>Licensed</b><span>IEMA Certified Pro</span></div>
+    <div class="s"><b>$135</b><span>Flat Home Test</span></div>
+  </div>
+</div></div></section>
+
+<div class="trust"><div class="wrap">
+  <span>&#10003; Licensed &amp; Insured</span>
+  <span>&#10003; Real Estate Tests Welcome</span>
+  <span>&#10003; Fast, Clear Results</span>
+  <span>&#10003; Locally Owned</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Straightforward radon testing</h2><p>Clear pricing, professional equipment, and results you can actually understand, whether you're protecting your family or closing on a home.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#127968;</div><h3>Home Radon Test</h3><p>A complete short-term test of your home using calibrated professional monitors, with a clear, easy-to-read report.<span class="price">$135 flat</span></p></div>
+    <div class="card"><div class="ic">&#128196;</div><h3>Real Estate Transaction Test</h3><p>Buying or selling? Fast, documented testing that meets real estate timelines and lender requirements.<span class="price">Quick scheduling</span></p></div>
+    <div class="card"><div class="ic">&#128202;</div><h3>Post-Mitigation Retest</h3><p>Had a mitigation system installed? Verify it's working with an independent follow-up test.<span class="price">Peace of mind</span></p></div>
+  </div>
+</div></section>
+
+<section class="how" id="how"><div class="wrap">
+  <div class="sec-head"><div class="k">How It Works</div><h2>Three simple steps</h2></div>
+  <div class="grid">
+    <div class="step"><div class="n">1</div><h3>Schedule online</h3><p>Pick a time that works for you in under a minute, or give us a call.</p></div>
+    <div class="step"><div class="n">2</div><h3>We test your home</h3><p>We place professional monitors and walk you through what to expect, no guesswork.</p></div>
+    <div class="step"><div class="n">3</div><h3>Get clear results</h3><p>You receive an easy-to-read report fast, with honest guidance on next steps if needed.</p></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <h2>Protect your home today</h2>
+  <p>Schedule your radon test online in under a minute, or call and we'll take care of the rest.</p>
+  <div class="cta">
+    <a href="#" class="btn btn-teal">Schedule a Test Online</a>
+    <a href="tel:6308812430" class="btn btn-ghost">Call 630-881-2430</a>
+  </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>Trusted by Fox Valley homeowners</h2><p>Your real Google reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Quick, professional, and explained everything clearly. Had our results in two days for our home sale."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Tom was on time and honest. No upsell, just a straight answer about our radon levels."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Booked online, tested fast, clear report. Exactly what you want for a home inspection."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">LOCAL RADON TESTING</div><p>Licensed, professional radon testing for a healthier home. Proudly serving St. Charles, Campton Hills, and the greater Fox Valley.</p></div>
+    <div><h4>Contact</h4><a href="tel:6308812430">630-881-2430</a><a href="mailto:Tom@localradontesting.com">Tom@localradontesting.com</a><p>St. Charles, IL 60175</p></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#how">How It Works</a><a href="#book">Schedule</a><a href="#reviews">Reviews</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+
+</body>
+</html>
