@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G&amp;A Upholstery | Furniture Reupholstery &amp; Restoration | Ravenswood, Chicago</title>
+<style>
+  :root{--ink:#211a1d;--char:#2e2429;--wine:#7b2233;--wine-dk:#641a29;--gold:#c79a3b;--cream:#f6f1ea;--line:#e7ded2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#241c1f;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;}
+  .btn-wine{background:var(--wine);color:#fff;box-shadow:0 6px 18px rgba(123,34,51,.3);}
+  .btn-wine:hover{background:var(--wine-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--ink);color:#d8c9bf;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--char);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--gold);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:8px;background:linear-gradient(135deg,var(--wine),#3a0f18);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:17px;letter-spacing:.5px;}
+  .logo .name{color:#fff;font-weight:800;font-size:18px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:10.5px;color:#bfae9f;letter-spacing:1.5px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#e7dccf;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{background:linear-gradient(rgba(25,18,21,.76),rgba(25,18,21,.84)),linear-gradient(135deg,#2e2429,#211a1d);color:#fff;}
+  .hero .wrap{padding:86px 24px 92px;}
+  .eyebrow{display:inline-block;background:rgba(199,154,59,.2);color:#e3c577;border:1px solid rgba(199,154,59,.5);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:760px;margin-bottom:18px;}
+  .hero h1 span{color:var(--gold);}
+  .hero p.sub{font-size:18px;color:#d6c7bc;max-width:600px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:44px;margin-top:50px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12.5px;color:#bfae9f;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--wine);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:78px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 48px;}
+  .sec-head .k{color:var(--wine);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:36px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#6a5a52;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:12px;padding:30px 26px;transition:.2s;background:#fff;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(33,26,29,.10);border-color:#e0d3c4;}
+  .card .ic{width:56px;height:56px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6a5a52;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:10px;background:linear-gradient(135deg,#7b2233,#2e2429);display:flex;align-items:center;justify-content:center;color:#e9d8c8;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #e0d3c4;}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .about .photo{height:340px;border-radius:14px;background:linear-gradient(135deg,#7b2233,#211a1d);display:flex;align-items:center;justify-content:center;border:1px solid #e0d3c4;}
+  .about .photo .label{color:#e9d8c8;font-size:14px;font-style:italic;text-align:center;padding:20px;}
+  .about h2{font-size:33px;color:var(--ink);font-weight:800;margin-bottom:8px;}
+  .about .quote{color:var(--wine);font-weight:700;font-size:18px;margin-bottom:18px;}
+  .about p{color:#564843;font-size:16px;margin-bottom:16px;}
+  .about ul{list-style:none;}
+  .about li{padding:7px 0 7px 30px;position:relative;color:#33282c;font-weight:600;}
+  .about li:before{content:"";position:absolute;left:0;top:13px;width:13px;height:13px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 4px rgba(123,34,51,.16);}
+  .book{background:linear-gradient(135deg,var(--ink),var(--char));color:#fff;text-align:center;}
+  .book h2{font-size:34px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#d6c7bc;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:12px;padding:26px;background:#fff;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#564843;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14.5px;}
+  footer{background:#1a1316;color:#bfae9f;padding:52px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:34px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#bfae9f;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2b2024;padding-top:20px;text-align:center;font-size:13px;color:#8a7a70;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.about .grid{grid-template-columns:1fr;}.hero h1{font-size:36px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for G&amp;A Upholstery by Foundry Line &nbsp;&bull;&nbsp; Photos &amp; copy are placeholders, ready to swap in your real ones</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Master craftsmanship since 1980</span> &nbsp; 5915 N Ravenswood Ave, Chicago</div>
+  <div><span class="badge">Call: 773-784-7818</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">G&amp;A</div><div class="name">G&amp;A UPHOLSTERY<small>Ravenswood, Chicago</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Our Work</a><a href="#about">About</a><a href="#quote">Free Estimate</a><a href="#quote" class="btn btn-wine" style="padding:10px 20px;">Free Estimate</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Furniture Reupholstery &amp; Restoration</span>
+  <h1>Bring your favorite furniture <span>back to life.</span></h1>
+  <p class="sub">For over 40 years, Ravenswood families and designers have trusted G&amp;A Upholstery to reupholster, refinish, and restore furniture they love, with craftsmanship you simply can't buy new.</p>
+  <div class="cta"><a href="#quote" class="btn btn-wine">Request a Free Estimate</a><a href="tel:7737847818" class="btn btn-ghost">Call 773-784-7818</a></div>
+  <div class="stats"><div class="s"><b>40+</b><span>Years in Ravenswood</span></div><div class="s"><b>1000s</b><span>Pieces Restored</span></div><div class="s"><b>Custom</b><span>Fabric &amp; Design</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Free Estimates</span><span>&#10003; Antique Restoration</span><span>&#10003; Custom Fabrics</span><span>&#10003; Pickup &amp; Delivery</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Full-service furniture craftsmanship</h2><p>From a tired sofa to a treasured antique, we handle it all with the same care we've brought to Chicago furniture for four decades.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129681;</div><h3>Reupholstery</h3><p>New life and new fabric for sofas, chairs, dining seats, and more, built to last.</p></div>
+    <div class="card"><div class="ic">&#128296;</div><h3>Furniture Repair</h3><p>Frames, joints, springs, and structure, expertly repaired so your piece is solid again.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Refinishing</h3><p>Wood refinishing and touch-ups that restore the original beauty of your furniture.</p></div>
+    <div class="card"><div class="ic">&#127993;</div><h3>Antique Restoration</h3><p>Careful, period-appropriate restoration that preserves the value of heirloom pieces.</p></div>
+    <div class="card"><div class="ic">&#129525;</div><h3>Custom Upholstery</h3><p>Choose from hundreds of fabrics to create something truly your own.</p></div>
+    <div class="card"><div class="ic">&#128666;</div><h3>Pickup &amp; Delivery</h3><p>We can pick up and return your furniture, making the whole process effortless.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Work</div><h2>Before &amp; after, the proof is in the pieces</h2><p>This is what's missing most from your current site. For a craft like yours, photos of real work win the job.</p></div>
+  <div class="ggrid">
+    <div class="gitem">[ Before / after photo ]</div>
+    <div class="gitem">[ Reupholstered sofa ]</div>
+    <div class="gitem">[ Restored antique chair ]</div>
+    <div class="gitem">[ Custom fabric work ]</div>
+    <div class="gitem">[ Refinished table ]</div>
+    <div class="gitem">[ Dining set ]</div>
+    <div class="gitem">[ Detail / stitching ]</div>
+    <div class="gitem">[ Finished room ]</div>
+  </div>
+</div></section>
+<section class="about" id="about"><div class="wrap"><div class="grid">
+  <div class="photo"><span class="label">[ Gonzalo / workshop photo here ]</span></div>
+  <div>
+    <h2>Four decades of Ravenswood craftsmanship</h2>
+    <div class="quote">Quality you can't buy new.</div>
+    <p>G&amp;A Upholstery has been a fixture on Ravenswood Avenue since 1980. Owner Gonzalo Gamez and his team bring old-world craftsmanship to every piece, treating your furniture with the care it deserves and standing behind their work.</p>
+    <ul><li>Family-owned since 1980</li><li>Upholstery, repair, refinishing &amp; restoration</li><li>Hundreds of fabrics to choose from</li><li>Trusted by Chicago homeowners &amp; designers</li></ul>
+  </div>
+</div></div></section>
+<section class="book" id="quote"><div class="wrap">
+  <h2>Have a piece worth saving?</h2>
+  <p>Send us a photo for a free estimate, or call the shop. We'll tell you honestly what it takes to bring it back.</p>
+  <div class="cta"><a href="#" class="btn btn-wine">Request a Free Estimate</a><a href="tel:7737847818" class="btn btn-ghost">Call 773-784-7818</a></div>
+</div></section>
+<section class="rev"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What Chicago says</h2><p>Your real Google reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They reupholstered my grandmother's chair and it looks better than new. True craftsmen."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Fair estimate, beautiful work, and they picked up and delivered. Couldn't be happier."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"As a designer I send all my clients here. Decades of skill you can see in every seam."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">G&amp;A UPHOLSTERY</div><p>Furniture reupholstery, repair, refinishing, and antique restoration in Chicago's Ravenswood neighborhood since 1980. Craftsmanship you can't buy new.</p></div>
+    <div><h4>Contact</h4><p>5915 N Ravenswood Ave<br>Chicago, IL 60660</p><a href="tel:7737847818">773-784-7818</a><a href="mailto:gonzalo@gnaupholstery.com">gonzalo@gnaupholstery.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Our Work</a><a href="#quote">Free Estimate</a><a href="#about">About</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

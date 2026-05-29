@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andersonville Antiques | Vintage Finds in Chicago's Andersonville</title>
+<style>
+  :root{--ink:#1c2a26;--forest:#244038;--forest2:#2d4f45;--brass:#b08a3e;--brass-dk:#8f6e２d;--brass2:#9a7833;--cream:#f4efe6;--line:#e6ddcd;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#23302c;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;}
+  .btn-brass{background:var(--brass);color:#fff;box-shadow:0 6px 18px rgba(176,138,62,.32);}
+  .btn-brass:hover{background:var(--brass2);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--ink);color:#cdd8d2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--forest);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--brass);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:8px;background:linear-gradient(135deg,var(--brass),#6f5421);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:#fff;font-weight:800;font-size:17px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:10.5px;color:#b9c7c0;letter-spacing:1.5px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#dce6e0;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{background:linear-gradient(rgba(22,30,27,.74),rgba(22,30,27,.82)),linear-gradient(135deg,#2d4f45,#1c2a26);color:#fff;}
+  .hero .wrap{padding:86px 24px 92px;}
+  .eyebrow{display:inline-block;background:rgba(176,138,62,.22);color:#e0c684;border:1px solid rgba(176,138,62,.5);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:760px;margin-bottom:18px;}
+  .hero h1 span{color:var(--brass);}
+  .hero p.sub{font-size:18px;color:#cdd8d2;max-width:600px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:44px;margin-top:50px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12.5px;color:#b9c7c0;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--brass);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:78px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 48px;}
+  .sec-head .k{color:var(--brass-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:36px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#5c6b65;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:10px;padding:30px 26px;transition:.2s;background:#fff;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(28,42,38,.10);border-color:#ddd0bc;}
+  .card .ic{width:56px;height:56px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#5c6b65;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:8px;background:linear-gradient(135deg,#244038,#b08a3e);display:flex;align-items:center;justify-content:center;color:#f4efe6;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #ddd0bc;}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .about .photo{height:340px;border-radius:12px;background:linear-gradient(135deg,#244038,#1c2a26);display:flex;align-items:center;justify-content:center;border:1px solid #ddd0bc;}
+  .about .photo .label{color:#dfe6e0;font-size:14px;font-style:italic;text-align:center;padding:20px;}
+  .about h2{font-size:33px;color:var(--ink);font-weight:800;margin-bottom:8px;}
+  .about .quote{color:var(--brass-dk);font-weight:700;font-size:18px;font-style:italic;margin-bottom:18px;}
+  .about p{color:#4c5b55;font-size:16px;margin-bottom:16px;}
+  .about ul{list-style:none;}
+  .about li{padding:7px 0 7px 30px;position:relative;color:#2c3a35;font-weight:600;}
+  .about li:before{content:"";position:absolute;left:0;top:13px;width:13px;height:13px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 4px rgba(176,138,62,.18);}
+  .book{background:linear-gradient(135deg,var(--ink),var(--forest));color:#fff;text-align:center;}
+  .book h2{font-size:34px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#cdd8d2;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#161e1b;color:#b9c7c0;padding:52px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:34px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#b9c7c0;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #25302c;padding-top:20px;text-align:center;font-size:13px;color:#7d8c85;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.about .grid{grid-template-columns:1fr;}.hero h1{font-size:36px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Andersonville Antiques by Foundry Line &nbsp;&bull;&nbsp; Photos &amp; copy are placeholders, ready to swap in your real ones</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Antiques &bull; Vintage &bull; Collectibles</span> &nbsp; 5234 N Clark St, Chicago</div>
+  <div><span class="badge">Call: 773-944-5665</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">AA</div><div class="name">ANDERSONVILLE ANTIQUES<small>Chicago, IL</small></div></div>
+  <div class="navlinks"><a href="#shop">Shop</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#visit">Visit</a><a href="#visit" class="btn btn-brass" style="padding:10px 20px;">Visit Us</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Andersonville's Treasure Trove</span>
+  <h1>One-of-a-kind <span>finds</span> with a story to tell.</h1>
+  <p class="sub">Chicago memorabilia, mid-century modern furniture, vintage clothing and jewelry, art glass, and curiosities you won't find anywhere else, right on Clark Street in the heart of Andersonville.</p>
+  <div class="cta"><a href="#gallery" class="btn btn-brass">Browse the Collection</a><a href="tel:7739445665" class="btn btn-ghost">Call 773-944-5665</a></div>
+  <div class="stats"><div class="s"><b>1000s</b><span>Unique Pieces</span></div><div class="s"><b>MCM</b><span>Furniture &amp; Decor</span></div><div class="s"><b>Clark St</b><span>Andersonville</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Ever-Changing Inventory</span><span>&#10003; Dealers &amp; Designers Welcome</span><span>&#10003; Chicago Memorabilia</span><span>&#10003; We Buy &amp; Sell</span></div></div>
+<section id="shop"><div class="wrap">
+  <div class="sec-head"><div class="k">What We Carry</div><h2>A little bit of everything, beautifully old</h2><p>Our inventory turns over constantly, so there's always something new to discover. Here's a taste of what fills the shop.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#127968;</div><h3>Mid-Century Modern</h3><p>Furniture, lighting, and decor from the eras collectors love most.</p></div>
+    <div class="card"><div class="ic">&#128081;</div><h3>Vintage Jewelry</h3><p>Antique and estate jewelry, from everyday vintage to true statement pieces.</p></div>
+    <div class="card"><div class="ic">&#127863;</div><h3>Chicago Memorabilia</h3><p>A standout collection of local history, signage, and Chicago keepsakes.</p></div>
+    <div class="card"><div class="ic">&#128087;</div><h3>Vintage Clothing</h3><p>Curated vintage fashion and accessories with real character.</p></div>
+    <div class="card"><div class="ic">&#127863;</div><h3>Art &amp; Glassware</h3><p>Art glass, paintings, and decorative objects to finish any room.</p></div>
+    <div class="card"><div class="ic">&#128269;</div><h3>Oddities &amp; Curiosities</h3><p>The unexpected treasures that make antiquing an adventure.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Gallery</div><h2>See the pieces, not just a promise</h2><p>Your current site says a gallery is "coming in the near future." For an antiques shop, the inventory is the whole draw, so here it is, front and center.</p></div>
+  <div class="ggrid">
+    <div class="gitem">[ Featured piece photo ]</div>
+    <div class="gitem">[ MCM furniture ]</div>
+    <div class="gitem">[ Vintage jewelry ]</div>
+    <div class="gitem">[ Chicago memorabilia ]</div>
+    <div class="gitem">[ Art glass ]</div>
+    <div class="gitem">[ Vintage clothing ]</div>
+    <div class="gitem">[ Curiosity / oddity ]</div>
+    <div class="gitem">[ New arrival ]</div>
+  </div>
+</div></section>
+<section class="about" id="about"><div class="wrap"><div class="grid">
+  <div class="photo"><span class="label">[ Storefront / interior photo here ]</span></div>
+  <div>
+    <h2>A Clark Street institution</h2>
+    <div class="quote">"Where we love is home." &ndash; Oliver Wendell Holmes, Sr.</div>
+    <p>Andersonville Antiques is a beloved fixture of Chicago's Andersonville neighborhood, packed with carefully chosen antiques, vintage goods, and collectibles. Whether you're a designer sourcing a statement piece or a neighbor hunting for treasure, there's always something worth the visit.</p>
+    <ul><li>Constantly refreshed inventory</li><li>Designers &amp; dealers welcome</li><li>We buy, sell &amp; consign</li><li>In the heart of Andersonville</li></ul>
+  </div>
+</div></div></section>
+<section class="book" id="visit"><div class="wrap">
+  <h2>Come find your treasure</h2>
+  <p>Stop by the shop on Clark Street, join our mailing list for special sales, or reach out with a question, we're happy to help.</p>
+  <div class="cta"><a href="mailto:info@andersonvilleantiques.com" class="btn btn-brass">Email the Shop</a><a href="tel:7739445665" class="btn btn-ghost">Call 773-944-5665</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">ANDERSONVILLE ANTIQUES</div><p>Antiques, vintage finds, Chicago memorabilia, and collectibles on Clark Street in Chicago's Andersonville neighborhood. Always something new to discover.</p></div>
+    <div><h4>Visit Us</h4><p>5234 N Clark St<br>Chicago, IL 60640</p><a href="tel:7739445665">773-944-5665</a><a href="mailto:info@andersonvilleantiques.com">info@andersonvilleantiques.com</a></div>
+    <div><h4>Quick Links</h4><a href="#shop">Shop</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#visit">Visit</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

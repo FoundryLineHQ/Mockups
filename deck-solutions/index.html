@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deck Solutions | Custom Decks, Patios &amp; Outdoor Living | Elburn, IL</title>
+<style>
+  :root{--bark:#2c2118;--bark2:#3a2c20;--green:#4f7942;--green-dk:#3f6235;--amber:#c8862a;--light:#f4f1ea;--line:#e6e0d4;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2a241c;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;}
+  .btn-green{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(79,121,66,.32);}
+  .btn-green:hover{background:var(--green-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--bark);color:#d8cdba;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--bark2);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--green);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--green),#2f4a28);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:#fff;font-weight:800;font-size:18px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:10.5px;color:#b7aa92;letter-spacing:1.5px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#e3dac9;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{background:linear-gradient(rgba(28,22,16,.74),rgba(28,22,16,.82)),linear-gradient(135deg,#3a2c20,#2c2118);color:#fff;}
+  .hero .wrap{padding:86px 24px 92px;}
+  .eyebrow{display:inline-block;background:rgba(79,121,66,.26);color:#a9d49a;border:1px solid rgba(79,121,66,.55);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:760px;margin-bottom:18px;}
+  .hero h1 span{color:var(--amber);}
+  .hero p.sub{font-size:18px;color:#d6ccbb;max-width:600px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:44px;margin-top:50px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12.5px;color:#b7aa92;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--green);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:78px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 48px;}
+  .sec-head .k{color:var(--green);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:36px;font-weight:800;color:var(--bark);margin:10px 0 14px;}
+  .sec-head p{color:#6b5d49;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.2s;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,33,24,.10);border-color:#ded5c4;}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:26px;}
+  .card h3{font-size:19px;color:var(--bark);margin-bottom:8px;}
+  .card p{color:#6b5d49;font-size:15px;}
+  .about{background:var(--light);}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .about .photo{height:340px;border-radius:16px;background:linear-gradient(135deg,#4f7942,#2c2118);display:flex;align-items:center;justify-content:center;border:1px solid #ded5c4;}
+  .about .photo .label{color:#e7e0d2;font-size:14px;font-style:italic;text-align:center;padding:20px;}
+  .about h2{font-size:33px;color:var(--bark);font-weight:800;margin-bottom:8px;}
+  .about .quote{color:var(--green);font-weight:700;font-size:18px;margin-bottom:18px;}
+  .about p{color:#574b3a;font-size:16px;margin-bottom:16px;}
+  .about ul{list-style:none;}
+  .about li{padding:7px 0 7px 30px;position:relative;color:#3a3024;font-weight:600;}
+  .about li:before{content:"";position:absolute;left:0;top:13px;width:13px;height:13px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(79,121,66,.18);}
+  .book{background:linear-gradient(135deg,var(--bark),var(--bark2));color:#fff;text-align:center;}
+  .book h2{font-size:34px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#d6ccbb;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;}
+  .stars{color:var(--amber);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#574b3a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--bark);font-size:14.5px;}
+  footer{background:#1f1810;color:#b7aa92;padding:52px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:34px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#b7aa92;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2e251a;padding-top:20px;text-align:center;font-size:13px;color:#8a7c66;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards{grid-template-columns:1fr;}.about .grid{grid-template-columns:1fr;}.hero h1{font-size:36px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Deck Solutions by Foundry Line &nbsp;&bull;&nbsp; Photos &amp; copy are placeholders, ready to swap in your real ones</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Building outdoor living since 1999</span> &nbsp; Serving the Fox Valley &amp; Chicagoland</div>
+  <div><span class="badge">Call: 630-513-9411</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">DS</div><div class="name">DECK SOLUTIONS<small>Elburn, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#quote">Contact</a><a href="#quote" class="btn btn-green" style="padding:10px 20px;">Free Quote</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Decks &bull; Patios &bull; Outdoor Living</span>
+  <h1>Bring your <span>backyard</span> to life.</h1>
+  <p class="sub">For over 25 years, Deck Solutions has designed and built custom decks, patios, and complete outdoor living spaces across the Fox Valley and Chicagoland. One team, start to finish.</p>
+  <div class="cta"><a href="#quote" class="btn btn-green">Request a Free Quote</a><a href="tel:6305139411" class="btn btn-ghost">Call 630-513-9411</a></div>
+  <div class="stats"><div class="s"><b>25+</b><span>Years in Business</span></div><div class="s"><b>1000s</b><span>Projects Completed</span></div><div class="s"><b>3D</b><span>Design Available</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Custom Design &amp; Build</span><span>&#10003; Wood &amp; Composite</span><span>&#10003; Cleaning &amp; Restoration</span><span>&#10003; Free Consultations</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">What We Build</div><h2>Your one-stop outdoor living team</h2><p>From a new deck to a full backyard transformation, we design, build, and maintain it all, using premium materials and a green, low-toxic approach.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129717;</div><h3>Custom Decks</h3><p>Cedar, hardwood, pressure-treated, and composite (Trex, TimberTech, Azek, Fiberon) decks built to last.</p></div>
+    <div class="card"><div class="ic">&#129521;</div><h3>Patios &amp; Hardscapes</h3><p>Paver patios, retaining walls, and outdoor kitchens and fireplaces that extend your living space.</p></div>
+    <div class="card"><div class="ic">&#127777;&#65039;</div><h3>Pergolas &amp; 3-Season Rooms</h3><p>Shade, structure, and year-round enjoyment built right into your backyard.</p></div>
+    <div class="card"><div class="ic">&#128161;</div><h3>Outdoor Lighting</h3><p>Custom railing and stairway lighting that adds beauty and safety after dark.</p></div>
+    <div class="card"><div class="ic">&#129532;</div><h3>Cleaning &amp; Restoration</h3><p>Eco-friendly deck and patio cleaning, sealing, and staining to protect your investment.</p></div>
+    <div class="card"><div class="ic">&#128221;</div><h3>3D Design &amp; Planning</h3><p>See your project before we build it, with collaborative 3D design and clear estimates.</p></div>
+  </div>
+</div></section>
+<section class="about" id="about"><div class="wrap"><div class="grid">
+  <div class="photo"><span class="label">[ Your project / team photo drops in here ]</span></div>
+  <div>
+    <h2>Outdoor living, done right since 1999</h2>
+    <div class="quote">Quality craftsmanship and a greener way to build.</div>
+    <p>Deck Solutions is a full-service deck and outdoor living company that has completed thousands of projects across Chicagoland. We're committed to quality craftsmanship, clear communication, and an environmentally responsible approach, from non-toxic restoration to composite materials.</p>
+    <ul><li>25+ years of experience</li><li>Design, installation, and maintenance in-house</li><li>Premium wood and composite options</li><li>Green, low-toxic restoration process</li></ul>
+  </div>
+</div></div></section>
+<section class="book" id="quote"><div class="wrap">
+  <h2>Ready to plan your project?</h2>
+  <p>Request a free quote online in under a minute, or call us and we'll set up a consultation and 3D design.</p>
+  <div class="cta"><a href="#" class="btn btn-green">Request a Free Quote</a><a href="tel:6305139411" class="btn btn-ghost">Call 630-513-9411</a></div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What homeowners say</h2><p>Your real Google reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"They designed exactly the deck we pictured and the crew was meticulous. Our backyard is transformed."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The 3D design made it so easy to decide. Beautiful composite deck, on time and on budget."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Had them restore our old deck and it looks brand new. Honest and professional."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">DECK SOLUTIONS</div><p>Custom decks, patios, and complete outdoor living spaces across the Fox Valley and Chicagoland since 1999. Design, build, and restoration under one roof.</p></div>
+    <div><h4>Contact</h4><p>108 N Main St<br>Elburn, IL 60119</p><a href="tel:6305139411">630-513-9411</a><a href="mailto:chris@deck-solutions.com">chris@deck-solutions.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#about">About</a><a href="#quote">Free Quote</a><a href="#reviews">Reviews</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>
