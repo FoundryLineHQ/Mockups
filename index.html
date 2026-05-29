@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stevens Automotive Repair | Geneva, IL Auto Repair</title>
+<style>
+  :root{
+    --navy:#0f1b2d; --navy2:#16263f; --red:#e23b2e; --red-dk:#c22d22;
+    --steel:#5b6b7f; --light:#f5f7fa; --line:#e3e8ef; --gold:#f3a712; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1d2733;background:#fff;line-height:1.6;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;letter-spacing:.3px;transition:.2s;cursor:pointer;}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(226,59,46,.35);}
+  .btn-red:hover{background:var(--red-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+
+  /* Top bar */
+  .topbar{background:var(--navy);color:#cdd7e3;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .left span{margin-right:22px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+
+  /* Nav */
+  header{background:var(--navy2);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--red);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:14px;}
+  .logo .mark{width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--red),#7a1810);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.15);}
+  .logo .name{color:#fff;font-weight:800;font-size:20px;letter-spacing:.5px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:11.5px;color:#9fb0c4;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:30px;align-items:center;}
+  .navlinks a{color:#d7e0ec;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+
+  /* Hero */
+  .hero{position:relative;background:
+      linear-gradient(rgba(10,18,30,.82),rgba(10,18,30,.88)),
+      repeating-linear-gradient(135deg,#16263f 0 28px,#13212f 28px 56px);
+      color:#fff;}
+  .hero .wrap{padding:88px 24px 96px;}
+  .eyebrow{display:inline-block;background:rgba(226,59,46,.16);color:#ff8a7e;border:1px solid rgba(226,59,46,.4);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:54px;line-height:1.08;font-weight:800;max-width:760px;margin-bottom:18px;}
+  .hero h1 span{color:var(--red);}
+  .hero .tag{font-size:20px;color:#c8d4e2;max-width:620px;margin-bottom:14px;font-style:italic;}
+  .hero p.sub{font-size:17px;color:#aebccd;max-width:600px;margin-bottom:34px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:54px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:34px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:13px;color:#9fb0c4;text-transform:uppercase;letter-spacing:1.5px;}
+
+  /* trust strip */
+  .trust{background:var(--red);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;letter-spacing:.4px;}
+  .trust .wrap span{display:flex;align-items:center;gap:9px;}
+
+  /* services */
+  section{padding:82px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 52px;}
+  .sec-head .k{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:38px;font-weight:800;color:var(--navy);margin:10px 0 14px;}
+  .sec-head p{color:#5b6b7f;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.2s;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,27,45,.10);border-color:#cfd9e6;}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .card h3{font-size:20px;color:var(--navy);margin-bottom:8px;}
+  .card p{color:#5b6b7f;font-size:15px;}
+  .ph{display:inline-block;margin-top:14px;font-size:12.5px;color:#9aa7b6;font-style:italic;}
+
+  /* about */
+  .about{background:var(--light);}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .about .photo{height:360px;border-radius:16px;background:
+     linear-gradient(135deg,#21344c,#0f1b2d);display:flex;align-items:center;justify-content:center;color:#5f739a;position:relative;overflow:hidden;border:1px solid #d5deea;}
+  .about .photo .label{color:#7f93ab;font-size:14px;font-style:italic;text-align:center;padding:20px;}
+  .about h2{font-size:34px;color:var(--navy);font-weight:800;margin-bottom:8px;}
+  .about .quote{color:var(--red);font-weight:700;font-size:18px;font-style:italic;margin-bottom:18px;}
+  .about p{color:#46566a;font-size:16px;margin-bottom:16px;}
+  .about ul{list-style:none;}
+  .about li{padding:7px 0 7px 30px;position:relative;color:#2c3a4c;font-weight:600;}
+  .about li:before{content:"";position:absolute;left:0;top:13px;width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(226,59,46,.18);}
+
+  /* booking CTA */
+  .book{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center;}
+  .book h2{font-size:36px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#b9c6d6;font-size:18px;max-width:560px;margin:0 auto 30px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+  /* reviews */
+  .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#46566a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--navy);font-size:14.5px;}
+
+  /* footer */
+  footer{background:#0a121e;color:#9fb0c4;padding:56px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:38px;}
+  footer .name{color:#fff;font-weight:800;font-size:20px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#9fb0c4;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1c2a3a;padding-top:20px;text-align:center;font-size:13px;color:#6c7d90;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){
+    .cards,.rev .cards{grid-template-columns:1fr;}
+    .about .grid{grid-template-columns:1fr;}
+    .hero h1{font-size:38px;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Stevens Automotive Repair by Foundry Line &nbsp;&bull;&nbsp; Photos &amp; copy are placeholders, ready to swap in your real ones</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span class="badge">Serving Geneva &amp; the Tri-Cities since 1999</span>
+      <span>Mon&ndash;Fri 8:00&ndash;5:30</span>
+    </div>
+    <div class="right"><span class="badge">Call or text: (630) 232-9440</span></div>
+  </div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">
+      <div class="mark">SA</div>
+      <div class="name">STEVENS AUTOMOTIVE<small>Repair &bull; Geneva, IL</small></div>
+    </div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#about">About Dave</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Contact</a>
+      <a href="#book" class="btn btn-red" style="padding:10px 20px;">Book Online</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" style="padding:0;">
+  <div class="wrap">
+    <span class="eyebrow">Trusted Geneva Auto Repair</span>
+    <h1>Honest repairs that <span>keep you on the road.</span></h1>
+    <p class="tag">&ldquo;The key to my success starts with your car.&rdquo; &mdash; Dave Stevens</p>
+    <p class="sub">From brakes and engines to classic cars and fleet service, our ASE-minded team treats your vehicle like our own. Book online in under a minute.</p>
+    <div class="cta">
+      <a href="#book" class="btn btn-red">Schedule Service</a>
+      <a href="tel:6302329440" class="btn btn-ghost">Call (630) 232-9440</a>
+    </div>
+    <div class="stats">
+      <div class="s"><b>25+</b><span>Years in Geneva</span></div>
+      <div class="s"><b>4.8&#9733;</b><span>Customer rated</span></div>
+      <div class="s"><b>All</b><span>Makes &amp; models</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <span>&#10003; Free Estimates</span>
+    <span>&#10003; Classic Car Specialists</span>
+    <span>&#10003; Fleet Service</span>
+    <span>&#10003; Same-Day Appointments</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">What We Do</div>
+      <h2>Full-service auto repair, done right</h2>
+      <p>One trusted shop for everything your vehicle needs, from routine maintenance to the jobs other shops won't touch.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ic">&#128295;</div><h3>Brake Repair</h3><p>Pads, rotors, lines, and full inspections so you stop with confidence.</p></div>
+      <div class="card"><div class="ic">&#9881;&#65039;</div><h3>Engine Repair &amp; Diagnostics</h3><p>Check-engine lights decoded and fixed with the right tools, not guesswork.</p></div>
+      <div class="card"><div class="ic">&#128663;</div><h3>Classic Car Care</h3><p>A specialty of the shop. We treat vintage machines with the respect they deserve.</p></div>
+      <div class="card"><div class="ic">&#128666;</div><h3>Fleet Services</h3><p>Keep your business vehicles running with priority scheduling and tracking.</p></div>
+      <div class="card"><div class="ic">&#128737;&#65039;</div><h3>Maintenance</h3><p>Oil, fluids, tires, and tune-ups that prevent the big repairs down the road.</p></div>
+      <div class="card"><div class="ic">&#128269;</div><h3>Pre-Purchase Inspections</h3><p>Buying used? Know exactly what you're getting before you sign.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="grid">
+      <div class="photo"><span class="label">[ Your shop photo or Dave's portrait drops in here ]</span></div>
+      <div>
+        <h2>Geneva's neighborhood mechanic</h2>
+        <div class="quote">Straight talk, fair prices, work that lasts.</div>
+        <p>Dave Stevens has spent over two decades keeping Geneva, St. Charles, and Batavia drivers safely on the road. No upsells, no surprises, just honest diagnostics and repairs explained in plain English.</p>
+        <ul>
+          <li>ASE-quality workmanship on every job</li>
+          <li>Up-front estimates before any work begins</li>
+          <li>Classic &amp; collector car expertise</li>
+          <li>Family-owned and community-rooted</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <h2>Ready to get back on the road?</h2>
+    <p>Book your appointment online in under a minute, or call the shop and we'll take care of the rest.</p>
+    <div class="cta">
+      <a href="#" class="btn btn-red">Book Appointment Online</a>
+      <a href="tel:6302329440" class="btn btn-ghost">Call (630) 232-9440</a>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Reviews</div>
+      <h2>What Geneva drivers say</h2>
+      <p>Your real Google reviews would feature here automatically.</p>
+    </div>
+    <div class="cards">
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Dave is the only mechanic I trust. Fixed my brakes same day and charged exactly what he quoted."</p><div class="who">[ Real review pulls in here ]</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Took my classic in and they treated it better than I do. Incredible attention to detail."</p><div class="who">[ Real review pulls in here ]</div></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest, fast, and friendly. Finally a shop that doesn't try to sell you things you don't need."</p><div class="who">[ Real review pulls in here ]</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="name">STEVENS AUTOMOTIVE REPAIR</div>
+        <p>Honest, reliable auto repair for Geneva and the Tri-Cities since 1999. Brakes, engines, classic cars, and fleet service under one roof.</p>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>530 Lark St.<br>Geneva, IL 60134</p>
+        <a href="tel:6302329440">(630) 232-9440</a>
+        <p>Mon&ndash;Fri: 8:00&ndash;5:30</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#about">About Dave</a>
+        <a href="#book">Book Online</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+    </div>
+    <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+  </div>
+</footer>
+
+</body>
+</html>
