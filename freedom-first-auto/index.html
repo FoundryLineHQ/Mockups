@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freedom 1st Auto Repair | North Aurora, IL Auto Repair</title>
+<style>
+  :root{
+    --navy:#0e1c33; --navy2:#15294a; --blue:#1d63c4; --blue-dk:#164e9c; --red:#d8362f;
+    --light:#f4f7fb; --line:#e2e8f2; --gold:#f2b01e; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1b2636;line-height:1.6;background:#fff;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;letter-spacing:.3px;transition:.2s;cursor:pointer;}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(29,99,196,.35);}
+  .btn-blue:hover{background:var(--blue-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--navy);color:#c6d3e6;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--navy2);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--blue);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:14px;}
+  .logo .mark{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#0c2c5c);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:15px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.15);}
+  .logo .name{color:#fff;font-weight:800;font-size:19px;letter-spacing:.4px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:11px;color:#9fb2ce;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:28px;align-items:center;}
+  .navlinks a{color:#d3dded;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{position:relative;background:linear-gradient(rgba(8,16,30,.83),rgba(8,16,30,.9)),repeating-linear-gradient(135deg,#15294a 0 30px,#11233f 30px 60px);color:#fff;}
+  .hero .wrap{padding:86px 24px 92px;}
+  .eyebrow{display:inline-block;background:rgba(29,99,196,.2);color:#7fb0f5;border:1px solid rgba(29,99,196,.5);padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.08;font-weight:800;max-width:780px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blue);}
+  .hero p.sub{font-size:18px;color:#b6c5da;max-width:620px;margin-bottom:32px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:32px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12.5px;color:#9fb2ce;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--blue);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  .trust .wrap span{display:flex;align-items:center;gap:9px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:700px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--blue);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--navy);margin:10px 0 14px;}
+  .sec-head p{color:#56657c;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.2s;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(14,28,51,.10);border-color:#cdd8e8;}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:26px;}
+  .card h3{font-size:19px;color:var(--navy);margin-bottom:8px;}
+  .card p{color:#56657c;font-size:15px;}
+  .card.spotlight{background:linear-gradient(135deg,#11233f,#15294a);border:none;color:#fff;}
+  .card.spotlight h3{color:#fff;} .card.spotlight p{color:#bcccE2;} .card.spotlight .ic{background:rgba(255,255,255,.12);}
+  .card.spotlight .tag{display:inline-block;margin-bottom:12px;background:var(--gold);color:#3a2c00;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;}
+  .about{background:var(--light);}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .about .photo{height:350px;border-radius:16px;background:linear-gradient(135deg,#1d3559,#0e1c33);display:flex;align-items:center;justify-content:center;border:1px solid #d2ddec;}
+  .about .photo .label{color:#7e93b4;font-size:14px;font-style:italic;text-align:center;padding:20px;}
+  .about h2{font-size:33px;color:var(--navy);font-weight:800;margin-bottom:8px;}
+  .about .quote{color:var(--blue);font-weight:700;font-size:18px;margin-bottom:18px;}
+  .about p{color:#44546a;font-size:16px;margin-bottom:16px;}
+  .about ul{list-style:none;}
+  .about li{padding:7px 0 7px 30px;position:relative;color:#28384c;font-weight:600;}
+  .about li:before{content:"";position:absolute;left:0;top:13px;width:13px;height:13px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(29,99,196,.18);}
+  .book{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#b6c5da;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#44546a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--navy);font-size:14.5px;}
+  footer{background:#0a1426;color:#9fb2ce;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:20px;margin-bottom:12px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#9fb2ce;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1a2942;padding-top:20px;text-align:center;font-size:13px;color:#697d99;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards{grid-template-columns:1fr;}.about .grid{grid-template-columns:1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Freedom 1st Auto Repair by Foundry Line &nbsp;&bull;&nbsp; Photos &amp; copy are placeholders, ready to swap in your real ones</div>
+
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Family owned &amp; ASE Certified</span> &nbsp; Mon&ndash;Sat 7:00&ndash;7:00</div>
+  <div><span class="badge">Call: 630-486-1778</span></div>
+</div></div>
+
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">F1</div><div class="name">FREEDOM 1ST AUTO<small>Repair &bull; North Aurora, IL</small></div></div>
+  <div class="navlinks">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#book">Contact</a>
+    <a href="#book" class="btn btn-blue" style="padding:10px 20px;">Book Online</a>
+  </div>
+</nav></header>
+
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">North Aurora Auto Repair</span>
+  <h1>Honest, affordable repair from <span>ASE Certified</span> mechanics.</h1>
+  <p class="sub">Family owned and operated for over 20 years. From oil changes and brakes to specialized hydraulic wheelchair lift repair, we get you back on the road with work you can trust.</p>
+  <div class="cta">
+    <a href="#book" class="btn btn-blue">Schedule Service</a>
+    <a href="tel:6304861778" class="btn btn-ghost">Call 630-486-1778</a>
+  </div>
+  <div class="stats">
+    <div class="s"><b>20+</b><span>Years Serving North Aurora</span></div>
+    <div class="s"><b>ASE</b><span>Certified Technicians</span></div>
+    <div class="s"><b>Free</b><span>Shuttle Service</span></div>
+  </div>
+</div></section>
+
+<div class="trust"><div class="wrap">
+  <span>&#10003; Family &amp; Locally Owned</span>
+  <span>&#10003; Free Estimates</span>
+  <span>&#10003; Reasonable Pricing</span>
+  <span>&#10003; All Makes &amp; Models</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head">
+    <div class="k">What We Do</div>
+    <h2>Full-service auto care in North Aurora</h2>
+    <p>From routine maintenance to the specialty work most shops can't handle, our certified team does it right the first time.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#128737;&#65039;</div><h3>Preventative Maintenance</h3><p>Oil changes, fluids, tune-ups, and electronic diagnostics to keep you running and avoid the big repairs.</p></div>
+    <div class="card"><div class="ic">&#128295;</div><h3>Brakes &amp; Suspension</h3><p>Stop with confidence and ride smooth. Cars, light trucks, heavy-duty, and fleets welcome.</p></div>
+    <div class="card spotlight"><span class="tag">Our Specialty</span><div class="ic">&#9855;</div><h3>Hydraulic Wheelchair Lift Repair</h3><p>Certified mobility-equipment service for DuPage &amp; Kane County. A specialty very few shops offer.</p></div>
+    <div class="card"><div class="ic">&#9881;&#65039;</div><h3>Engine Diagnostics</h3><p>Check-engine lights read and fixed with the right tools, clearly explained before any work.</p></div>
+    <div class="card"><div class="ic">&#128666;</div><h3>Fleet &amp; Truck Service</h3><p>Keep your work vehicles moving with priority scheduling and dependable turnaround.</p></div>
+    <div class="card"><div class="ic">&#128176;</div><h3>Affordable General Repair</h3><p>Low-cost, high-quality repairs across all makes and models, with a free estimate every time.</p></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap"><div class="grid">
+  <div class="photo"><span class="label">[ Your shop / team photo drops in here ]</span></div>
+  <div>
+    <h2>Your neighborhood shop for over 20 years</h2>
+    <div class="quote">We don't just meet expectations, we exceed them.</div>
+    <p>Freedom 1st Auto Repair is a family-owned, locally operated shop serving North Aurora and the surrounding DuPage and Kane County communities. We treat every customer fairly, explain every repair, and stand behind our work.</p>
+    <ul>
+      <li>ASE Certified technicians</li>
+      <li>Honest, up-front estimates</li>
+      <li>Specialized hydraulic wheelchair lift repair</li>
+      <li>Free shuttle service while we work</li>
+    </ul>
+  </div>
+</div></div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <h2>Need a repair or estimate?</h2>
+  <p>Book online in under a minute or call the shop. We'll get you a free estimate and back on the road fast.</p>
+  <div class="cta">
+    <a href="#" class="btn btn-blue">Book Appointment Online</a>
+    <a href="tel:6304861778" class="btn btn-ghost">Call 630-486-1778</a>
+  </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What North Aurora drivers say</h2><p>Your real Google reviews would display here automatically, replacing the "coming soon" on your current site.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Fair price, honest work, and they fixed my brakes same day. Finally a shop I trust."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"One of the only shops around that services my wheelchair van lift. Lifesavers."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Family-owned and it shows. They explained everything and never upsold me."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">FREEDOM 1ST AUTO REPAIR</div><p>Affordable, honest auto repair and maintenance for North Aurora and the Fox Valley for over 20 years. ASE Certified. Family owned.</p></div>
+    <div><h4>Visit Us</h4><p>200 Poplar Pl, Unit C<br>North Aurora, IL 60542</p><a href="tel:6304861778">630-486-1778</a><p>Mon&ndash;Sat: 7:00&ndash;7:00</p></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#about">About</a><a href="#book">Book Online</a><a href="#reviews">Reviews</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+
+</body>
+</html>
