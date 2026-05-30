@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katrina Salon &amp; Spa | Aveda Lifestyle Salon in Batavia, IL</title>
+<style>
+  :root{--ink:#211a22;--plum:#6d3a55;--plum-dk:#582e45;--gold:#c39a52;--blush:#d9c0c7;--cream:#f6f0ef;--line:#e9dfe1;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#271f28;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-plum{background:var(--plum);color:#fff;box-shadow:0 6px 18px rgba(109,58,85,.3);}
+  .btn-plum:hover{background:var(--plum-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#d7c8d0;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(33,26,34,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--plum),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#866f80;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#473a47;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--plum);}
+  .hero{background:linear-gradient(rgba(24,18,25,.7),rgba(24,18,25,.82)),url('https://katrinasalonandspa.com/themes/theme2/img/bg-contact.jpg') center/cover no-repeat,linear-gradient(135deg,#3c2433,#211a22);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(195,154,82,.22);color:#e3c98a;border:1px solid rgba(195,154,82,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#d6c8d0;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#b3a3ad;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--plum);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--plum);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#675c66;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(33,26,34,.10);border-color:#e3d6d9;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#675c66;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#6d3a55,#211a22);display:flex;align-items:center;justify-content:center;color:#f3e8ec;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #e3d6d9;}
+  .book{background:linear-gradient(135deg,var(--ink),#3c2433);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#d6c8d0;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#1a141b;color:#b3a3ad;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#b3a3ad;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2b2230;padding-top:20px;text-align:center;font-size:13px;color:#866f80;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+  .logo img.brand{height:46px;width:auto;display:block;}
+  .gitem{overflow:hidden;} .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Katrina Salon &amp; Spa by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, remaining tiles ready for your gallery</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Aveda Lifestyle Salon</span> &nbsp; 8 N River St, Batavia, IL</div>
+  <div><span class="badge">Call: 630.482.2772</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://katrinasalonandspa.com/themes/theme2/img/logo.png" alt="Katrina Salon &amp; Spa"><div class="name">KATRINA SALON &amp; SPA<small>Batavia, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#book">Contact</a><a href="#book" class="btn btn-plum" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Downtown Batavia on the River</span>
+  <h1>Hair &amp; spa that <span>feels like you.</span></h1>
+  <p class="sub">A full-service Aveda Lifestyle Salon on the Fox River in downtown Batavia. Hair, color, skin, nails, and spa, all in one welcoming place.</p>
+  <div class="cta"><a href="#book" class="btn btn-plum">Book an Appointment</a><a href="tel:6304822772" class="btn btn-ghost">Call 630.482.2772</a></div>
+  <div class="stats"><div class="s"><b>Aveda</b><span>Lifestyle Salon</span></div><div class="s"><b>Full</b><span>Salon &amp; Spa</span></div><div class="s"><b>Bridal</b><span>&amp; Special Events</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Hair &amp; Aveda Color</span><span>&#10003; Facials &amp; Spa</span><span>&#10003; Nails &amp; Waxing</span><span>&#10003; Extensions &amp; Keratin</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Everything for hair, skin &amp; nails</h2><p>Expert stylists and estheticians using Aveda's botanically based products, all under one roof.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#9986;</div><h3>Hair &amp; Color</h3><p>Cuts, Aveda color, highlights, perms, keratin treatments, and hair extensions.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Facials &amp; Skin</h3><p>Customized facials and advanced spa skincare to renew and refresh.</p></div>
+    <div class="card"><div class="ic">&#128140;</div><h3>Nails</h3><p>Relaxing manicures and pedicures for hands and feet that feel amazing.</p></div>
+    <div class="card"><div class="ic">&#129770;</div><h3>Waxing</h3><p>Gentle, precise waxing services for smooth, beautiful skin.</p></div>
+    <div class="card"><div class="ic">&#9728;&#65039;</div><h3>Spray Tans</h3><p>A flawless, natural-looking glow without the sun, any time of year.</p></div>
+    <div class="card"><div class="ic">&#128141;</div><h3>Bridal &amp; Events</h3><p>Special-occasion styling and bridal services to make your day perfect.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Work</div><h2>See the transformations</h2><p>Your real before-and-afters and salon photos would fill this gallery automatically, the kind of visuals that turn followers into appointments.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://katrinasalonandspa.com/themes/theme2/img/promo-artists.jpg" alt="Katrina Salon artists"></div>
+    <div class="gitem"><img src="https://katrinasalonandspa.com/themes/theme2/img/promo-blog-cropped.jpg" alt="Katrina Salon"></div>
+    <div class="gitem"><img src="https://katrinasalonandspa.com/fb-share.jpg" alt="Katrina Salon &amp; Spa"></div>
+    <div class="gitem">[ The salon space ]</div>
+    <div class="gitem">[ Facial / spa ]</div>
+    <div class="gitem">[ Nail artistry ]</div>
+    <div class="gitem">[ Extensions ]</div>
+    <div class="gitem">[ Happy client ]</div>
+  </div>
+</div></section>
+<section class="book" id="about"><div class="wrap">
+  <h2>On the river in downtown Batavia</h2>
+  <p>Come experience a full-service Aveda salon and spa where you're treated like family. Book online in under a minute or give us a call.</p>
+  <div class="cta"><a href="#" class="btn btn-plum">Book Online</a><a href="tel:6304822772" class="btn btn-ghost">Call 630.482.2772</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">KATRINA SALON &amp; SPA</div><p>A full-service Aveda Lifestyle Salon on the Fox River in downtown Batavia, IL. Hair, color, skin, nails, and spa, with a warm, welcoming touch.</p></div>
+    <div><h4>Visit Us</h4><p>8 N River St<br>Batavia, IL 60510</p><a href="tel:6304822772">630.482.2772</a><a href="mailto:katrinasalon@comcast.net">katrinasalon@comcast.net</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

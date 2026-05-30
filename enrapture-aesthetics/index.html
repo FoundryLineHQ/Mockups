@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enrapture Aesthetics | Med Spa &amp; Injectables in Geneva, IL</title>
+<style>
+  :root{--ink:#1b1218;--char:#271b22;--berry:#a83a5b;--berry-dk:#8c2e4a;--gold:#c7a25a;--cream:#f7f1f0;--line:#ece0e2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#221a1f;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-berry{background:var(--berry);color:#fff;box-shadow:0 6px 18px rgba(168,58,91,.32);}
+  .btn-berry:hover{background:var(--berry-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#dccad2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(27,18,24,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--berry),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.4px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#8c7c84;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#483c43;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--berry-dk);}
+  .hero{background:linear-gradient(rgba(20,12,17,.72),rgba(20,12,17,.8)),linear-gradient(135deg,#2c1d25,#1b1218);color:#fff;}
+  .hero .wrap{padding:90px 24px 96px;}
+  .eyebrow{display:inline-block;background:rgba(168,58,91,.24);color:#e3a7bb;border:1px solid rgba(168,58,91,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--berry);}
+  .hero p.sub{font-size:18px;color:#d6c4cc;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#b6a4ac;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--berry);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--berry-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#6c5e65;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(27,18,24,.10);border-color:#e6d6da;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6c5e65;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#a83a5b,#1b1218);display:flex;align-items:center;justify-content:center;color:#f7e8ec;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #e6d6da;}
+  .team{padding-top:0;}
+  .team .grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:560px;margin:0 auto;}
+  .doc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;text-align:center;}
+  .doc .ph{width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,#e3a7bb,#c7a25a);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;color:#6b3a4a;font-size:12px;font-style:italic;overflow:hidden;}
+  .doc .ph img{width:100%;height:100%;object-fit:cover;}
+  .logo img.brand{height:46px;width:auto;display:block;}
+  .doc h3{font-size:19px;color:var(--ink);}
+  .doc span{font-size:13.5px;color:#8c7c84;}
+  .book{background:linear-gradient(135deg,var(--ink),var(--char));color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#d6c4cc;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#150e13;color:#b6a4ac;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.4px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#b6a4ac;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f26;padding-top:20px;text-align:center;font-size:13px;color:#897987;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Enrapture Aesthetics by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; provider photo shown here, results gallery ready for your before/afters</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Boutique Med Spa</span> &nbsp; 1610 Commons Dr (Sola Salons #13), Geneva, IL</div>
+  <div><span class="badge">Call/Text: 331-444-2507</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://img1.wsimg.com/isteam/ip/16e4127a-531e-4faf-b627-5d0c0abd32e0/Enrapture%20Aesthetics%20Logo2-0003.jpg" alt="Enrapture Aesthetics"><div class="name">ENRAPTURE AESTHETICS<small>Geneva, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#results">Results</a><a href="#provider">Provider</a><a href="#book">Contact</a><a href="#book" class="btn btn-berry" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Boutique Med Spa in Geneva</span>
+  <h1>Enhance your <span>natural beauty.</span></h1>
+  <p class="sub">Botox, fillers, HydraFacials, and microneedling from a Board-Certified Nurse Practitioner who puts your safety and natural results first.</p>
+  <div class="cta"><a href="#book" class="btn btn-berry">Book a Consultation</a><a href="tel:3314442507" class="btn btn-ghost">Call or Text 331-444-2507</a></div>
+  <div class="stats"><div class="s"><b>FNP-BC</b><span>Board-Certified Provider</span></div><div class="s"><b>Member</b><span>Pricing Available</span></div><div class="s"><b>Safety</b><span>First, Always</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Botox &amp; Fillers</span><span>&#10003; HydraFacial</span><span>&#10003; Microneedling + Exosomes</span><span>&#10003; Membership Savings</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Treatments to leave you enraptured</h2><p>Customized, evidence-based aesthetic services in a relaxing boutique setting.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#128137;</div><h3>Neuromodulators</h3><p>Botox, Dysport, Xeomin &amp; Daxxify to smooth fine lines and wrinkles.</p></div>
+    <div class="card"><div class="ic">&#128132;</div><h3>Dermal Fillers &amp; Lip Flip</h3><p>Restore volume and definition with natural-looking results.</p></div>
+    <div class="card"><div class="ic">&#128166;</div><h3>HydraFacial</h3><p>Deep cleanse, exfoliate, and hydrate for an instant, radiant glow.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Microneedling + Exosomes</h3><p>Stimulate collagen and accelerate results with advanced exosome therapy.</p></div>
+    <div class="card"><div class="ic">&#129701;</div><h3>Dermaplane Facial</h3><p>Smooth, brighten, and refresh your skin's texture and tone.</p></div>
+    <div class="card"><div class="ic">&#11088;</div><h3>Membership</h3><p>$100/yr unlocks member pricing on tox, filler, facials, microneedling &amp; more.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="results"><div class="wrap">
+  <div class="sec-head"><div class="k">Real Results</div><h2>Before &amp; after, the proof in the glow</h2><p>Your real client photos would fill this gallery automatically, the section that's currently empty on your site, and it's what turns lookers into bookers.</p></div>
+  <div class="ggrid">
+    <div class="gitem">[ Botox before/after ]</div>
+    <div class="gitem">[ Lip filler before/after ]</div>
+    <div class="gitem">[ Microneedling result ]</div>
+    <div class="gitem">[ HydraFacial glow ]</div>
+    <div class="gitem">[ Dermaplane result ]</div>
+    <div class="gitem">[ Filler before/after ]</div>
+    <div class="gitem">[ Happy client ]</div>
+    <div class="gitem">[ Treatment room ]</div>
+  </div>
+</div></section>
+<section class="team" id="provider"><div class="wrap">
+  <div class="sec-head"><div class="k">Your Provider</div><h2>Medically led, personally delivered</h2></div>
+  <div class="grid">
+    <div class="doc"><div class="ph"><img src="https://img1.wsimg.com/isteam/ip/16e4127a-531e-4faf-b627-5d0c0abd32e0/profilepic2-b5c1ad1.jpeg" alt="Maylene Benes"></div><h3>Maylene Benes, MSN, APRN, FNP-BC</h3><span>Board-Certified Nurse Practitioner &amp; Owner</span></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready to feel enraptured?</h2>
+  <p>Book your appointment online in under a minute, or call or text and we'll find the perfect time.</p>
+  <div class="cta"><a href="#" class="btn btn-berry">Book Online</a><a href="tel:3314442507" class="btn btn-ghost">Call or Text 331-444-2507</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">ENRAPTURE AESTHETICS</div><p>Boutique med spa in Geneva, IL. Injectables, HydraFacials, microneedling, and more, delivered by a Board-Certified Nurse Practitioner with safety and natural results first.</p></div>
+    <div><h4>Visit Us</h4><p>1610 Commons Dr<br>(Sola Salons, Studio 13)<br>Geneva, IL 60134</p><a href="tel:3314442507">331-444-2507</a><a href="mailto:Info@enraptureaesthetics.com">Info@enraptureaesthetics.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#results">Results</a><a href="#provider">Provider</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

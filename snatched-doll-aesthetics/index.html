@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snatched Doll Aesthetics | Med Spa in West Dundee &amp; Carpentersville, IL</title>
+<style>
+  :root{--ink:#161013;--char:#221a1e;--pink:#d24a7e;--pink-dk:#b53a69;--gold:#d4af67;--blush:#e7b9cb;--cream:#f8f0f3;--line:#ecdde3;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f161a;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:0 6px 18px rgba(210,74,126,.34);}
+  .btn-pink:hover{background:var(--pink-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#e0c9d2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(22,16,19,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:16px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:16px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:9.5px;color:#8c747e;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#4a3a40;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--pink);}
+  .hero{background:linear-gradient(rgba(18,12,15,.72),rgba(18,12,15,.82)),url('https://static.wixstatic.com/media/c13864_de795e3ac6d849b5b2aa8745317779fbf000.jpg') center/cover no-repeat,linear-gradient(135deg,#3a2129,#161013);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(212,175,103,.22);color:#ecd49a;border:1px solid rgba(212,175,103,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#dcc7ce;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#bca6ad;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--pink);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--pink);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#6c5a61;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(22,16,19,.10);border-color:#e6d3da;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6c5a61;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#d24a7e,#161013);display:flex;align-items:center;justify-content:center;color:#f7e6ec;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #e6d3da;overflow:hidden;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .logo .mark img{width:100%;height:100%;object-fit:cover;}
+  .book{background:linear-gradient(135deg,var(--ink),#3a2129);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#dcc7ce;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#130d10;color:#bca6ad;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#bca6ad;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f24;padding-top:20px;text-align:center;font-size:13px;color:#8c747e;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Snatched Doll Aesthetics by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Med Spa &amp; Aesthetics</span> &nbsp; West Dundee &amp; Carpentersville, IL</div>
+  <div><span class="badge">Call/Text: (224) 454-0262</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark"><img src="https://static.wixstatic.com/media/c13864_465ec6456a614f3dab5a8ba9bbc89581~mv2.png" alt="Snatched Doll Aesthetics logo"></div><div class="name">SNATCHED DOLL AESTHETICS<small>West Dundee, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="#book">Contact</a><a href="#book" class="btn btn-pink" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Where Luxury Meets Results</span>
+  <h1>Unlock your <span>natural beauty.</span></h1>
+  <p class="sub">A top-rated med spa in West Dundee &amp; Carpentersville. Botox, fillers, body sculpting, weight loss, and skin rejuvenation, with a warm, no-pressure approach and natural-looking results.</p>
+  <div class="cta"><a href="#book" class="btn btn-pink">Book a Free Consult</a><a href="tel:2244540262" class="btn btn-ghost">Call or Text (224) 454-0262</a></div>
+  <div class="stats"><div class="s"><b>$50 OFF</b><span>First Diamond Glow</span></div><div class="s"><b>Plans</b><span>Flexible Payment Options</span></div><div class="s"><b>Natural</b><span>Results, Every Time</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Botox &amp; Fillers</span><span>&#10003; EmSculpt &amp; Body Contouring</span><span>&#10003; Morpheus8 &amp; IPL</span><span>&#10003; Weight Loss &amp; IV</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Your full menu, beautifully organized</h2><p>From injectables to body sculpting and wellness, every treatment is customized to your goals.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#128137;</div><h3>Injectables</h3><p>Botox, dermal fillers, and lip enhancement for natural, balanced results.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Skin Rejuvenation</h3><p>Morpheus8, IPL/Lumecca, microneedling, and chemical peels for radiant skin.</p></div>
+    <div class="card"><div class="ic">&#128131;</div><h3>Body Sculpting</h3><p>EmSculpt NEO and advanced contouring to tone and refine, no surgery.</p></div>
+    <div class="card"><div class="ic">&#9878;&#65039;</div><h3>Weight Loss</h3><p>Physician-guided Semaglutide &amp; Tirzepatide programs that deliver.</p></div>
+    <div class="card"><div class="ic">&#128138;</div><h3>IV Infusions &amp; Wellness</h3><p>Custom IV drips and HRT to restore energy, recovery, and balance.</p></div>
+    <div class="card"><div class="ic">&#128064;</div><h3>Lashes &amp; Facials</h3><p>Diamond Glow facials, lash lifts &amp; extensions, brows, and waxing.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="results"><div class="wrap">
+  <div class="sec-head"><div class="k">Real Results</div><h2>Witness the transformation</h2><p>Your real before-and-afters would display here in a clean, full-resolution gallery, the visuals that turn your big social following into booked appointments.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_7dacf2100c4a4e66a9f4e35b127683a3~mv2.png" alt="Before and after result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_3c9d33d61ad1493eaaa6610f9b951686~mv2.png" alt="Before and after result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_fa30fc3158864102aee015fdc0ecc661~mv2.jpg" alt="Treatment result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_753e4c2ced1048b38b13cf7eecff318d~mv2.jpg" alt="Treatment result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_1997b5c19d3e4ed6beac6b065fd3d26a~mv2.png" alt="Before and after result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_2c136e0512e6450882aa298865b17b31~mv2.jpg" alt="Treatment result"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_e26a944afc9f487b96e9ce318c4c8ebb~mv2.jpg" alt="Happy client"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c13864_21188fcc5aca4c488e91edaf57102aa5~mv2.jpg" alt="The spa"></div>
+  </div>
+</div></section>
+<section class="book" id="about"><div class="wrap">
+  <h2>Owned &amp; operated by Brenda Mutehart</h2>
+  <p>A warm, compassionate team dedicated to natural-looking results and real self-care. Book your no-pressure consult and let your inner Snatched Doll shine.</p>
+  <div class="cta"><a href="#" class="btn btn-pink">Book a Free Consult</a><a href="tel:2244540262" class="btn btn-ghost">Call or Text (224) 454-0262</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">SNATCHED DOLL AESTHETICS</div><p>A top-rated med spa serving West Dundee, Carpentersville, and the Fox Valley. Injectables, body sculpting, weight loss, skin rejuvenation, and wellness, with natural-looking results.</p></div>
+    <div><h4>Visit Us</h4><p>350 South 8th St (Rt 31)<br>West Dundee, IL 60118</p><a href="tel:2244540262">(224) 454-0262</a><a href="mailto:snatchdoll@gmail.com">snatchdoll@gmail.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

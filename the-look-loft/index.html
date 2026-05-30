@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Look Loft | Holistic Aesthetics &amp; Wellness Med Spa in Elgin, IL</title>
+<style>
+  :root{--ink:#172220;--teal:#3f7d74;--teal-dk:#336760;--gold:#c2a35e;--sand:#cdbfa8;--cream:#f4f1ea;--line:#e4ddd0;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f2a27;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(63,125,116,.3);}
+  .btn-teal:hover{background:var(--teal-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#c8d6d2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(23,34,32,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:16px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#7a8884;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#3a4744;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--teal);}
+  .hero{background:linear-gradient(rgba(18,26,24,.68),rgba(18,26,24,.8)),url('https://static.wixstatic.com/media/bf09ff_c7055abf7e6c40e3a5ab8e701a9cff98~mv2.jpg') center/cover no-repeat,linear-gradient(135deg,#274039,#172220);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(194,163,94,.22);color:#e1cb8c;border:1px solid rgba(194,163,94,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sand);}
+  .hero p.sub{font-size:18px;color:#cdd9d5;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#a7b5b1;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--teal);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--teal);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#5b6864;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(23,34,32,.10);border-color:#dbd3c4;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#5b6864;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#3f7d74,#172220);display:flex;align-items:center;justify-content:center;color:#e9f0ed;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #dbd3c4;}
+  .book{background:linear-gradient(135deg,var(--ink),#274039);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#cdd9d5;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#131c1a;color:#a7b5b1;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#a7b5b1;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #233330;padding-top:20px;text-align:center;font-size:13px;color:#7a8884;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+  .logo img.brand{height:44px;width:auto;display:block;}
+  .gitem{overflow:hidden;} .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for The Look Loft by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Holistic Aesthetics &amp; Wellness</span> &nbsp; 750 Fletcher Dr, Ste 301, Elgin, IL</div>
+  <div><span class="badge">Call: (847) 893-9227</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://static.wixstatic.com/media/bf09ff_e4f600ad28854f48aab8de02f5e72eee~mv2.png" alt="The Look Loft"><div class="name">THE LOOK LOFT<small>Elgin, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="#book">Contact</a><a href="#book" class="btn btn-teal" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Because You Matter</span>
+  <h1>Aesthetics &amp; wellness <span>for every body.</span></h1>
+  <p class="sub">A physician-founded holistic med spa in Elgin, where a personal touch meets the forefront of beauty technology. Hair restoration, skin rejuvenation, body sculpting, and more.</p>
+  <div class="cta"><a href="#book" class="btn btn-teal">Schedule a Consultation</a><a href="tel:8478939227" class="btn btn-ghost">Call (847) 893-9227</a></div>
+  <div class="stats"><div class="s"><b>MD</b><span>Physician Founded</span></div><div class="s"><b>Member</b><span>Pricing Available</span></div><div class="s"><b>Holistic</b><span>Whole-Body Approach</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Alma TED Hair Restoration</span><span>&#10003; OPUS Skin Rejuvenation</span><span>&#10003; Body Sculpting</span><span>&#10003; Facials &amp; Massage</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Advanced treatments, personal touch</h2><p>Cutting-edge technology and holistic care, tailored to your goals and your body.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129403;</div><h3>Alma TED Hair Restoration</h3><p>Needle-free acoustic technology that improves scalp health and regrows hair.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>OPUS Skin Rejuvenation</h3><p>RF + plasma resurfacing for lines, texture, scarring, and tone, often in one treatment.</p></div>
+    <div class="card"><div class="ic">&#128131;</div><h3>Body Sculpting</h3><p>Tone, contour, and refine targeted areas with innovative non-invasive tech.</p></div>
+    <div class="card"><div class="ic">&#129752;</div><h3>Facials</h3><p>Cutting-edge techniques and luxe skincare for a hydrated, radiant glow.</p></div>
+    <div class="card"><div class="ic">&#128134;</div><h3>Massage Therapy</h3><p>60-minute sessions to release tension and revitalize body and mind.</p></div>
+    <div class="card"><div class="ic">&#127807;</div><h3>Holistic Health</h3><p>Whole-body wellness services that support how you look and feel from within.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="results"><div class="wrap">
+  <div class="sec-head"><div class="k">Real Results</div><h2>See the transformations</h2><p>Your real before-and-afters and full-resolution treatment photos would fill this gallery automatically, the visuals that turn your Instagram followers into booked consults.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c837a6_7edaf6c169e44ad8884aa705c181fd55~mv2.jpg" alt="Hair restoration"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/e6128e_ffed8edbd56a47baa6f85c141b5c5ef8~mv2.jpeg" alt="Hair restoration treatment"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/e6128e_3e4104d131da49f5b4459cf2611585cb~mv2.jpg" alt="Body sculpting"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c837a6_f9dd7374a1984e158800ffc88555537e~mv2.jpg" alt="Skin treatment"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/e6128e_077d854691f248cb83f31bffcd5036e6~mv2.jpg" alt="Massage therapy"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/c837a6_f160a913413a426dba05c147477d9d04~mv2.jpg" alt="Happy client"></div>
+    <div class="gitem"><img src="https://static.wixstatic.com/media/e6128e_4bf2dfb724df497da449deffd995a863~mv2.png" alt="Dr. Renee McMurry, founder"></div>
+    <div class="gitem">[ The team ]</div>
+  </div>
+</div></section>
+<section class="book" id="about"><div class="wrap">
+  <h2>Founded by Dr. Renee McMurry</h2>
+  <p>Where personal touch meets the forefront of beauty technology. Meet the team and schedule your consultation, your wellness journey starts here.</p>
+  <div class="cta"><a href="#" class="btn btn-teal">Schedule a Consultation</a><a href="tel:8478939227" class="btn btn-ghost">Call (847) 893-9227</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">THE LOOK LOFT</div><p>A physician-founded holistic aesthetics and wellness med spa in Elgin, IL. Hair restoration, skin rejuvenation, body sculpting, facials, and massage, for every body.</p></div>
+    <div><h4>Visit Us</h4><p>750 Fletcher Dr, Ste 301<br>Elgin, IL 60123</p><a href="tel:8478939227">(847) 893-9227</a><a href="mailto:admin@thelookloft.com">admin@thelookloft.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

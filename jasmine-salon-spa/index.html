@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasmine Salon &amp; Spa | Aveda Salon &amp; Day Spa in Lake Geneva, WI</title>
+<style>
+  :root{--ink:#1f2a23;--sage:#6a7f63;--sage-dk:#566a50;--gold:#bda05c;--blush:#d8c3b0;--cream:#f5f1e9;--line:#e7e0d2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#26302a;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-sage{background:var(--sage);color:#fff;box-shadow:0 6px 18px rgba(106,127,99,.3);}
+  .btn-sage:hover{background:var(--sage-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#cdd6c8;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(31,42,35,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#7e887a;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#3f4a3e;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--sage);}
+  .hero{background:linear-gradient(rgba(22,30,24,.62),rgba(22,30,24,.74)),url('https://images.squarespace-cdn.com/content/v1/64163a6566fc9c72c0289fc4/34779b16-6f4b-4915-b687-946d41eee0c5/jasmine-header----.jpg') center/cover no-repeat,linear-gradient(135deg,#33402f,#1f2a23);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(189,160,92,.22);color:#e2cd8e;border:1px solid rgba(189,160,92,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#d2dacd;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#aab3a4;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--sage);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--sage);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#5d665a;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:.2s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(31,42,35,.10);border-color:#ddd6c5;}
+  .card h3{font-size:20px;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+  .card p{color:#5d665a;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#6a7f63,#1f2a23);display:flex;align-items:center;justify-content:center;color:#eef2e8;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #ddd6c5;}
+  .book{background:linear-gradient(135deg,var(--ink),#33402f);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#d2dacd;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#18211b;color:#aab3a4;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#aab3a4;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #28332a;padding-top:20px;text-align:center;font-size:13px;color:#7e887a;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+  .logo img.brand{height:48px;width:auto;display:block;}
+  .gitem{overflow:hidden;} .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Jasmine Salon &amp; Spa by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, remaining tiles ready for your gallery</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Aveda Salon &amp; Day Spa</span> &nbsp; 251 Cook Street, Lake Geneva, WI</div>
+  <div><span class="badge">Call: 262.249.9800</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://images.squarespace-cdn.com/content/v1/64163a6566fc9c72c0289fc4/91bb8fc0-c52a-42af-866d-a51170a3a8b7/Jasmien+Salon+%26+Spa+logo+dark.png" alt="Jasmine Salon &amp; Spa"></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#bridal">Bridal</a><a href="#book">Contact</a><a href="#book" class="btn btn-sage" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">In a Historic Downtown Home</span>
+  <h1>Luxury &amp; rejuvenation, <span>like never before.</span></h1>
+  <p class="sub">A full-service Aveda salon and day spa nestled in a charming historic home in downtown Lake Geneva. Hair, skin, body, and bridal, all in one tranquil place.</p>
+  <div class="cta"><a href="#book" class="btn btn-sage">Book an Appointment</a><a href="tel:2622499800" class="btn btn-ghost">Call 262.249.9800</a></div>
+  <div class="stats"><div class="s"><b>Aveda</b><span>Salon &amp; Products</span></div><div class="s"><b>Spa</b><span>+ HydraFacial</span></div><div class="s"><b>Bridal</b><span>In-Salon &amp; Off-Site</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Hair &amp; Aveda Color</span><span>&#10003; Facials &amp; HydraFacial</span><span>&#10003; Massage &amp; Reiki</span><span>&#10003; Bridal Services</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Everything for hair, skin &amp; body</h2><p>Aveda, Amika, Epionce, and Jane Iredale, the finest products, delivered in a serene historic setting.</p></div>
+  <div class="cards">
+    <div class="card"><h3>&#9986; Salon &amp; Hair</h3><p>Haircuts, Aveda customized color, botanical repair, shampoo rituals, special-occasion styling, and hair extensions.</p></div>
+    <div class="card"><h3>&#10024; Skin &amp; Facials</h3><p>HydraFacial, dermaplaning, and customized facials to renew, restore, and rehydrate your glow.</p></div>
+    <div class="card"><h3>&#128140; Hands &amp; Feet</h3><p>Manicures, pedicures, and our signature Radiance Renewal treatments for nails and skin.</p></div>
+    <div class="card"><h3>&#128132; Body &amp; Wellness</h3><p>Massage, Reiki and Chakra sessions, sugaring, threading, and waxing in a tranquil space.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Work &amp; Space</div><h2>See the glow, and the historic home</h2><p>Your real before-and-afters and photos of the house would fill this gallery automatically, beautifully, replacing the broken image grid on your current site.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://images.squarespace-cdn.com/content/v1/64163a6566fc9c72c0289fc4/1780070559226-6O30Z0R1AOZ95S59AOBG/image-asset.jpeg" alt="Facial before and after"></div>
+    <div class="gitem"><img src="https://images.squarespace-cdn.com/content/v1/64163a6566fc9c72c0289fc4/1779829597170-BYJ07ABZ89HX0DU73UOL/image-asset.jpeg" alt="Skin treatment"></div>
+    <div class="gitem"><img src="https://images.squarespace-cdn.com/content/v1/64163a6566fc9c72c0289fc4/cd7e41f4-bb99-43dc-87c0-529c43c0a6a5/jasmine-identity-bkg--.jpg" alt="Jasmine Salon"></div>
+    <div class="gitem">[ The historic home ]</div>
+    <div class="gitem">[ Spa treatment room ]</div>
+    <div class="gitem">[ Nail artistry ]</div>
+    <div class="gitem">[ Happy client ]</div>
+    <div class="gitem">[ Product display ]</div>
+  </div>
+</div></section>
+<section class="book" id="bridal"><div class="wrap">
+  <h2>Saying "I do" in Lake Geneva?</h2>
+  <p>From hair and makeup to facials and the whole party, our in-salon and off-site bridal services make your day effortless. Book your bridal consultation today.</p>
+  <div class="cta"><a href="#" class="btn btn-sage">Book Online</a><a href="tel:2622499800" class="btn btn-ghost">Call 262.249.9800</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">JASMINE SALON &amp; SPA</div><p>A full-service Aveda salon and day spa in a historic home in downtown Lake Geneva, WI. Hair, skin, body, and bridal, all in one tranquil place.</p></div>
+    <div><h4>Visit Us</h4><p>251 Cook Street<br>Lake Geneva, WI 53147</p><a href="tel:2622499800">262.249.9800</a><a href="mailto:info@jasminesalonspa.com">info@jasminesalonspa.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#bridal">Bridal</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

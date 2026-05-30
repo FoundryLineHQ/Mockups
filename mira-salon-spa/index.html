@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mira Salon &amp; Spa | Luxury Salon, Spa &amp; Lash Studio in DeKalb, IL</title>
+<style>
+  :root{--ink:#13211c;--emer:#2f6b53;--emer-dk:#255744;--gold:#c4a35a;--sage:#bcd0c5;--cream:#f4f2ea;--line:#e4e3d6;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1c2a24;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-emer{background:var(--emer);color:#fff;box-shadow:0 6px 18px rgba(47,107,83,.3);}
+  .btn-emer:hover{background:var(--emer-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#c6d4cc;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(19,33,28,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--emer),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:18px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#74857c;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#39473f;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--emer);}
+  .hero{background:linear-gradient(rgba(16,28,23,.68),rgba(16,28,23,.8)),url('https://mirasalonspa.com/wp-content/uploads/2026/03/AdobeStock_1561465624-scaled.jpeg') center/cover no-repeat,linear-gradient(135deg,#21443a,#13211c);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(196,163,90,.22);color:#e2cd92;border:1px solid rgba(196,163,90,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sage);}
+  .hero p.sub{font-size:18px;color:#c8d6ce;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#9fb1a8;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--emer);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--emer);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#586660;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(19,33,28,.10);border-color:#dad9c8;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card .price{display:inline-block;margin-top:6px;margin-bottom:8px;color:var(--emer-dk);font-weight:800;font-size:14px;}
+  .card p{color:#586660;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;background:linear-gradient(135deg,#2f6b53,#13211c);display:flex;align-items:center;justify-content:center;color:#e9f0ec;font-size:12.5px;font-style:italic;text-align:center;padding:14px;border:1px solid #dad9c8;}
+  .book{background:linear-gradient(135deg,var(--ink),#21443a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#c8d6ce;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#101a16;color:#9fb1a8;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#9fb1a8;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1f2e28;padding-top:20px;text-align:center;font-size:13px;color:#74857c;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+  .logo img.brand{height:46px;width:auto;display:block;}
+  .gitem{overflow:hidden;} .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Mira Salon &amp; Spa by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; salon photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Luxury Salon, Spa &amp; Lash Studio</span> &nbsp; 327 E Hillcrest Dr, DeKalb, IL</div>
+  <div><span class="badge">Call: (815) 748-5887</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://mirasalonspa.com/wp-content/uploads/2019/06/Picture2.png" alt="Mira Salon &amp; Spa"><div class="name">MIRA SALON &amp; SPA<small>DeKalb, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#book">Contact</a><a href="#book" class="btn btn-emer" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">The Best Salon &amp; Spa in DeKalb</span>
+  <h1>Your true <span>escape</span> for self-care.</h1>
+  <p class="sub">A luxury salon, spa, and lash studio in DeKalb, where every experience is crafted to soothe your senses. Hair, skin, massage, lashes, and more, with organic, customized care.</p>
+  <div class="cta"><a href="#book" class="btn btn-emer">Book an Appointment</a><a href="tel:8157485887" class="btn btn-ghost">Call (815) 748-5887</a></div>
+  <div class="stats"><div class="s"><b>Salon</b><span>Spa &amp; Lash Studio</span></div><div class="s"><b>Organic</b><span>Customized Care</span></div><div class="s"><b>Online</b><span>Booking 24/7</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Hair &amp; Color</span><span>&#10003; Facials &amp; Skin</span><span>&#10003; Massage &amp; Bodywork</span><span>&#10003; Lashes &amp; Waxing</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Your full menu, finally on one page</h2><p>Everything Mira offers, clearly laid out, the services-and-pricing page your current site is still missing.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#9986;</div><h3>Hair Services</h3><span class="price">Cut &bull; Color &bull; Style</span><p>Expert cuts, custom color, and styling tailored to your look and lifestyle.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Skin &amp; Facials</h3><span class="price">Organic &amp; Customized</span><p>Deep-cleansing, microdermabrasion, and ProCell facials for every skin type.</p></div>
+    <div class="card"><div class="ic">&#128134;</div><h3>Massage &amp; Bodywork</h3><span class="price">Swedish &bull; Deep Tissue</span><p>Therapeutic massage, craniosacral, and Thai bodywork to relax and renew.</p></div>
+    <div class="card"><div class="ic">&#128064;</div><h3>Lash Studio</h3><span class="price">Lifts &amp; Extensions</span><p>Lash lifts, tints, and extensions for effortless, wide-awake eyes.</p></div>
+    <div class="card"><div class="ic">&#129770;</div><h3>Waxing &amp; Sugaring</h3><span class="price">Face &amp; Body</span><p>Gentle waxing and organic sugaring with lasting, comfortable results.</p></div>
+    <div class="card"><div class="ic">&#128140;</div><h3>Nails &amp; Cosmetics</h3><span class="price">Mani &bull; Pedi &bull; Brows</span><p>Manicures, pedicures, shellac, brow tinting, and special-occasion makeup.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Work &amp; Space</div><h2>See the transformations</h2><p>Your real before-and-afters and photos of the salon would fill this gallery automatically, the visuals that turn followers into booked appointments.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/Front-of-building.jpg" alt="Mira Salon front"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/Walking-in.jpg" alt="Inside Mira Salon"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/Purple-treatment-room.jpg" alt="Treatment room"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/pedicure-room-1.jpg" alt="Pedicure room"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2026/04/Amanda-6I9A9689-scaled.jpg" alt="Amanda, owner"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2026/04/Tori-6I9A9605-scaled.jpg" alt="Stylist Tori"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/davines-1.jpg" alt="Davines products"></div>
+    <div class="gitem"><img src="https://mirasalonspa.com/wp-content/uploads/2019/06/front-sign.jpg" alt="Mira Salon sign"></div>
+  </div>
+</div></section>
+<section class="book" id="about"><div class="wrap">
+  <h2>Locally rooted, owned by Amanda McGinnis</h2>
+  <p>Over 45 years of serving DeKalb with personalized beauty and wellness. Book online in under a minute, or call and our team will take care of the rest.</p>
+  <div class="cta"><a href="#" class="btn btn-emer">Book Online</a><a href="tel:8157485887" class="btn btn-ghost">Call (815) 748-5887</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">MIRA SALON &amp; SPA</div><p>A luxury salon, spa, and lash studio in DeKalb, IL. Hair, skin, massage, lashes, waxing, and nails, with organic, personalized care in a peaceful escape.</p></div>
+    <div><h4>Visit Us</h4><p>327 E Hillcrest Dr<br>DeKalb, IL 60115</p><a href="tel:8157485887">(815) 748-5887</a><a href="mailto:receptionist@mirasalonspa.com">receptionist@mirasalonspa.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

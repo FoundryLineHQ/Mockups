@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jakked Gym | Old-School Iron, No Nonsense | Montgomery, IL</title>
+<style>
+  :root{--ink:#0c0d0e;--char:#15161a;--amber:#f2b417;--amber-dk:#d99e0c;--steel:#7e8794;--cream:#f2f3f5;--line:#23252b;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#101216;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:800;font-size:14.5px;letter-spacing:.8px;text-transform:uppercase;transition:.2s;cursor:pointer;}
+  .btn-amber{background:var(--amber);color:#15161a;box-shadow:0 6px 18px rgba(242,180,23,.32);}
+  .btn-amber:hover{background:var(--amber-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:var(--ink);color:#aab2bf;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--char);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--amber);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:6px;background:linear-gradient(135deg,var(--amber),#8a6603);display:flex;align-items:center;justify-content:center;font-weight:900;color:#15161a;font-size:18px;}
+  .logo .name{color:#fff;font-weight:900;font-size:20px;letter-spacing:2px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#969fad;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:26px;align-items:center;}
+  .navlinks a{color:#d3d8df;font-weight:700;font-size:14.5px;letter-spacing:.5px;text-transform:uppercase;}
+  .navlinks a:hover{color:var(--amber);}
+  .hero{background:linear-gradient(rgba(7,8,9,.72),rgba(7,8,9,.84)),url('https://static.wixstatic.com/media/31c617_9f80a2d19bfa43e0806fba2f0047c316~mv2.jpg') center/cover no-repeat,repeating-linear-gradient(135deg,#15161a 0 32px,#101115 32px 64px);color:#fff;}
+  .hero .wrap{padding:96px 24px 100px;}
+  .eyebrow{display:inline-block;background:rgba(242,180,23,.16);color:#f5cf6a;border:1px solid rgba(242,180,23,.5);padding:6px 14px;border-radius:4px;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:60px;line-height:1.02;font-weight:900;max-width:760px;margin-bottom:18px;text-transform:uppercase;letter-spacing:1px;}
+  .hero h1 span{color:var(--amber);}
+  .hero p.sub{font-size:18px;color:#bcc3cc;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:32px;font-weight:900;color:var(--amber);}
+  .hero .stats .s span{font-size:12px;color:#969fad;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--amber);color:#15161a;}
+  .trust .wrap{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:16px 24px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.6px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--amber-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:40px;font-weight:900;color:var(--ink);margin:10px 0 14px;text-transform:uppercase;letter-spacing:.5px;}
+  .sec-head p{color:#54606e;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{border:1px solid #e4e6ea;border-radius:10px;padding:30px 24px;transition:.2s;text-align:center;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(12,13,14,.12);border-color:var(--amber);}
+  .card .tag{font-size:13px;color:#7e8794;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+  .card .price{font-size:42px;font-weight:900;color:var(--ink);margin:4px 0 8px;}
+  .card p{color:#54606e;font-size:14.5px;}
+  .hours{background:var(--ink);color:#fff;}
+  .hours .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:820px;margin:0 auto;}
+  .hours .box{background:var(--char);border:1px solid var(--line);border-radius:10px;padding:30px;}
+  .hours .box h3{color:var(--amber);font-size:18px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
+  .hours .box p{color:#cfd4db;font-size:15px;margin-bottom:4px;}
+  .book{background:linear-gradient(135deg,var(--char),#23252b);color:#fff;text-align:center;}
+  .book h2{font-size:38px;font-weight:900;margin-bottom:12px;text-transform:uppercase;}
+  .book p{color:#bcc3cc;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#090a0b;color:#969fad;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:900;font-size:20px;margin-bottom:12px;letter-spacing:2px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#969fad;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1a1c20;padding-top:20px;text-align:center;font-size:13px;color:#69727f;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards{grid-template-columns:1fr;}.hours .grid{grid-template-columns:1fr;}.hero h1{font-size:40px;}.navlinks{display:none;}}
+  .logo img.brand{height:50px;width:auto;display:block;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Jakked Gym by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; gym photo shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Bodybuilding &bull; Powerlifting &bull; Strongman</span> &nbsp; 1450 SE River Rd, Unit C, Montgomery, IL</div>
+  <div><span class="badge">(630) 966-8611</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://static.wixstatic.com/media/31c617_eb657ef4c9074f5d97b2faa77e88e398~mv2.png" alt="Jakked Gym"></div>
+  <div class="navlinks"><a href="#rates">Rates</a><a href="#hours">Hours</a><a href="#facility">Facility</a><a href="#book">Join</a><a href="#book" class="btn btn-amber" style="padding:10px 20px;">View Rates</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Old-School Iron &bull; No Nonsense</span>
+  <h1>No contracts. <span>No enrollment fees.</span> Just iron.</h1>
+  <p class="sub">A serious gym for bodybuilding, powerlifting, and strongman in Montgomery, IL. No enrollment fees, no annual fees, no minimum-term contracts, cancel anytime. Just everything you need to get strong.</p>
+  <div class="cta"><a href="#rates" class="btn btn-amber">View Rates</a><a href="tel:6309668611" class="btn btn-ghost">Call (630) 966-8611</a></div>
+  <div class="stats"><div class="s"><b>$0</b><span>Enrollment Fees</span></div><div class="s"><b>5AM</b><span>Member Access</span></div><div class="s"><b>14+</b><span>All Lifters Welcome</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>No Annual Fees</span><span>No Contracts</span><span>Cancel Anytime</span><span>Personal Training</span></div></div>
+<section id="rates"><div class="wrap">
+  <div class="sec-head"><div class="k">Day Passes &amp; Punch Cards</div><h2>Simple, honest pricing</h2><p>Drop in or stock up. Discounted rates for students, military, and first responders. Memberships available too, no enrollment fees, ever.</p></div>
+  <div class="cards">
+    <div class="card"><div class="tag">Day Pass</div><div class="price">$15</div><p>Standard single-visit day pass. Student &amp; first responder: $10.</p></div>
+    <div class="card"><div class="tag">5-Visit Punch Card</div><div class="price">$50</div><p>Five visits at a better rate. Student &amp; first responder: $45.</p></div>
+    <div class="card"><div class="tag">Membership</div><div class="price">$0<span style="font-size:15px;color:#7e8794;font-weight:600;"> enroll</span></div><p>Monthly &amp; paid-in-full options with 24/7 member access. No contracts.</p></div>
+  </div>
+</div></section>
+<section class="hours" id="hours"><div class="wrap">
+  <div class="sec-head"><div class="k">Hours</div><h2 style="color:#fff;">Train on your schedule</h2></div>
+  <div class="grid">
+    <div class="box"><h3>Member Access</h3><p>Monday – Friday: 5:00 AM – 10:00 PM</p><p>Saturday – Sunday: 5:00 AM – 9:00 PM</p><p style="color:#969fad;font-size:13px;margin-top:8px;">Active membership required for early access.</p></div>
+    <div class="box"><h3>Staffed Hours</h3><p>Monday – Friday: 8:00 AM – 10:00 PM</p><p>Saturday – Sunday: 9:00 AM – 9:00 PM</p><p style="color:#969fad;font-size:13px;margin-top:8px;">Day passes &amp; sign-ups during staffed hours.</p></div>
+  </div>
+</div></section>
+<section class="book" id="facility"><div class="wrap">
+  <h2>Come see the iron</h2>
+  <p>Stop in during staffed hours to sign up, grab a day pass, or take a tour. Questions? Hit us up, we'll get you set.</p>
+  <div class="cta"><a href="#" class="btn btn-amber">See Memberships</a><a href="mailto:info@jakkedgym.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">JAKKED GYM</div><p>Old-school iron, no nonsense. A serious bodybuilding, powerlifting, and strongman gym in Montgomery, IL. No enrollment fees, no contracts, just hard work.</p></div>
+    <div><h4>Visit Us</h4><p>1450 SE River Rd, Unit C<br>Montgomery, IL 60538</p><a href="tel:6309668611">(630) 966-8611</a><a href="mailto:info@jakkedgym.com">info@jakkedgym.com</a></div>
+    <div><h4>Quick Links</h4><a href="#rates">Rates</a><a href="#hours">Hours</a><a href="#facility">Facility</a><a href="#book">Join Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

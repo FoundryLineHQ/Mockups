@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STC Pilates | Boutique Reformer Pilates Studio in St. Charles, IL</title>
+<style>
+  :root{--ink:#23291f;--moss:#5a6b4a;--moss-dk:#48563b;--sand:#c9b89a;--gold:#b79b63;--cream:#f5f2ea;--line:#e6e0d2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#262b20;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-moss{background:var(--moss);color:#fff;box-shadow:0 6px 18px rgba(90,107,74,.3);}
+  .btn-moss:hover{background:var(--moss-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#cdd2c2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(35,41,31,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--moss),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:15px;letter-spacing:.5px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:18px;line-height:1.1;letter-spacing:1px;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#7c8470;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#414a37;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--moss);}
+  .hero{background:linear-gradient(rgba(26,31,21,.68),rgba(26,31,21,.8)),url('https://images.squarespace-cdn.com/content/v1/58fd589986e6c0f3d2883ba4/1501776648827-Q1VJ9QYJ2XVA50I7TDGE/IMG_4613.JPG') center/cover no-repeat,linear-gradient(135deg,#3a4530,#23291f);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(183,155,99,.22);color:#e0cb96;border:1px solid rgba(183,155,99,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:54px;line-height:1.08;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sand);}
+  .hero p.sub{font-size:18px;color:#cfd5c5;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#aab09c;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--moss);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--moss);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#5e6553;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(35,41,31,.10);border-color:#ddd5c4;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#5e6553;font-size:15px;}
+  .intro{background:var(--cream);}
+  .intro .box{max-width:680px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:44px 30px;}
+  .intro .box .price{font-size:46px;font-weight:800;color:var(--moss);}
+  .intro .box h3{font-size:24px;color:var(--ink);margin:6px 0 10px;}
+  .intro .box p{color:#5e6553;font-size:16px;margin-bottom:22px;}
+  .book{background:linear-gradient(135deg,var(--ink),#33402a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#cfd5c5;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#54593f;color:#555c49;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14px;}
+  footer{background:#1b2016;color:#aab09c;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:1px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#aab09c;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2b3322;padding-top:20px;text-align:center;font-size:13px;color:#7c8470;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards{grid-template-columns:1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+  .logo img.brand{height:46px;width:auto;display:block;border-radius:8px;}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for STC Pilates by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; studio photo shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Boutique Pilates Studio</span> &nbsp; St. Charles, IL</div>
+  <div><span class="badge">Call: (630) 513-5955</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://static1.squarespace.com/static/58fd589986e6c0f3d2883ba4/t/595d7b6f197aea78bef1151c/1499298673607/STC_Logo_Social.jpg?format=300w" alt="STC Pilates"><div class="name">STC PILATES<small>St. Charles, IL</small></div></div>
+  <div class="navlinks"><a href="#classes">Classes</a><a href="#intro">New Clients</a><a href="#reviews">Reviews</a><a href="#book">Schedule</a><a href="#book" class="btn btn-moss" style="padding:10px 22px;">Book a Class</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Wellness &bull; Balance &bull; Strength</span>
+  <h1>Your flow <span>starts here.</span></h1>
+  <p class="sub">A boutique Pilates studio in St. Charles rooted in classical method with a contemporary approach. Small classes, dedicated instructors, designed with you in mind.</p>
+  <div class="cta"><a href="#book" class="btn btn-moss">Book a Class</a><a href="tel:6305135955" class="btn btn-ghost">Call (630) 513-5955</a></div>
+  <div class="stats"><div class="s"><b>Small</b><span>Class Sizes</span></div><div class="s"><b>$30</b><span>Intro Private Session</span></div><div class="s"><b>Reformer</b><span>Tower, Chair &amp; Mat</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Reformer &amp; Tower</span><span>&#10003; Mat &amp; Barre</span><span>&#10003; Private &amp; Group</span><span>&#10003; All Levels Welcome</span></div></div>
+<section id="classes"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Classes</div><h2>Mix it up, find your flow</h2><p>Mat, Barre, Reformer, Chair, or Tower, take your pick on Balanced Body's signature apparatus.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129496;</div><h3>Reformer</h3><p>Our signature equipment classes, building strength, control, and fluid movement.</p></div>
+    <div class="card"><div class="ic">&#129336;</div><h3>Tower &amp; Chair</h3><p>Targeted apparatus work to deepen your practice and challenge your stability.</p></div>
+    <div class="card"><div class="ic">&#129464;</div><h3>Mat Pilates</h3><p>Classical mat work that builds core strength and body awareness, anywhere.</p></div>
+    <div class="card"><div class="ic">&#127917;</div><h3>Barre</h3><p>Low-weight, high-rep flows blending ballet, Pilates, and functional fitness.</p></div>
+    <div class="card"><div class="ic">&#128100;</div><h3>Private Sessions</h3><p>One-on-one instruction tailored entirely to your goals and your body.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Group Classes</h3><p>Intimate, open-level group sessions where everyone gets attention.</p></div>
+  </div>
+</div></section>
+<section class="intro" id="intro"><div class="wrap">
+  <div class="box">
+    <div class="price">$30</div>
+    <h3>New Client Intro Session</h3>
+    <p>Every new member's first 50-minute private session is just $30, a one-on-one assessment and introduction to our space, so we can help you find the path that fits you.</p>
+    <a href="#book" class="btn btn-moss">Register as a New Client</a>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready to flow?</h2>
+  <p>View the live schedule and book your class online in under a minute, or reach out with any questions.</p>
+  <div class="cta"><a href="#" class="btn btn-moss">View Schedule &amp; Book</a><a href="tel:6305135955" class="btn btn-ghost">Call (630) 513-5955</a></div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>Loved by our community</h2><p>Your real Google &amp; Instagram reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The instructors are incredible and the small classes mean I actually get coached. I'm stronger than ever."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Beautiful studio and such a welcoming vibe. The $30 intro made it so easy to start."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best Pilates in the Fox Valley. I look forward to every class."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">STC PILATES</div><p>A boutique Pilates studio in St. Charles, IL. Classical method, contemporary approach, small classes and dedicated instructors. Your flow starts here.</p></div>
+    <div><h4>Connect</h4><a href="tel:6305135955">(630) 513-5955</a><a href="mailto:info@stcpilates.com">info@stcpilates.com</a><p>St. Charles, IL 60174</p></div>
+    <div><h4>Quick Links</h4><a href="#classes">Classes</a><a href="#intro">New Clients</a><a href="#book">Schedule</a><a href="#reviews">Reviews</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>
