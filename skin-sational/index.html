@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Sational Skin Care | Facials, Microneedling &amp; Waxing in Schaumburg, IL</title>
+<style>
+  :root{--ink:#1c1418;--char:#271b20;--rose:#c77f8e;--rose-dk:#a96472;--gold:#c9a86a;--blush:#ecc9d1;--cream:#f8f1f3;--line:#eddfe3;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#211a1d;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-rose{background:var(--rose);color:#fff;box-shadow:0 6px 18px rgba(199,127,142,.34);}
+  .btn-rose:hover{background:var(--rose-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#ddc9cf;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(28,20,24,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:52px;width:auto;display:block;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#473a40;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--rose-dk);}
+  .hero{background:linear-gradient(rgba(24,16,20,.6),rgba(24,16,20,.72)),url('https://images.squarespace-cdn.com/content/v1/661606564399111753d4c1fa/bc58a230-06f1-421b-bb8d-c1b1b2863a30/dreamstime_xxl_17494003.jpg') center/cover no-repeat,linear-gradient(135deg,#3a2530,#1c1418);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(201,168,106,.22);color:#e7cd97;border:1px solid rgba(201,168,106,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#ddc8cf;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:28px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#bca5ac;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--rose);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--rose-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#6b5a61;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(28,20,24,.10);border-color:#e6d3d8;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6b5a61;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:190px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#c77f8e,#1c1418);border:1px solid #e6d3d8;display:flex;align-items:center;justify-content:center;color:#f3e6ea;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#5f535a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--ink),#3a2530);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#ddc8cf;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#170f12;color:#bca5ac;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#bca5ac;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f24;padding-top:20px;text-align:center;font-size:13px;color:#8c747c;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Skin Sational Skin Care by Foundry Line &nbsp;&bull;&nbsp; Your real logo shown here; swap the stock photos for your own client &amp; treatment shots</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Skin Care &bull; Day Spa</span> &nbsp; 217 Meacham Rd, Schaumburg, IL 60193</div>
+  <div><span class="badge">Book/Call: 630-977-9712</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://images.squarespace-cdn.com/content/v1/661606564399111753d4c1fa/5f56c925-a8ab-4887-bd35-3dd8a7cdaf19/LOGO2.jpg" alt="Skin Sational Skin Care"></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-rose" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Every Skin Deserves to Be Flawless</span>
+  <h1>Enhance your <span>natural beauty.</span></h1>
+  <p class="sub">Schaumburg's skin care experts. Customized facials, microneedling, chemical peels, dermaplaning, lash &amp; brow, and waxing, with one purpose: to give you the confidence you deserve.</p>
+  <div class="cta"><a href="#book" class="btn btn-rose">Book a Treatment</a><a href="tel:6309779712" class="btn btn-ghost">Call 630-977-9712</a></div>
+  <div class="stats"><div class="s"><b>Expert</b><span>Licensed Esthetician</span></div><div class="s"><b>Custom</b><span>Every Skin Type</span></div><div class="s"><b>Shop</b><span>Pro Skincare Products</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Facials &amp; HydroDerm</span><span>&#10003; Microneedling</span><span>&#10003; Chemical Peels</span><span>&#10003; Lash &amp; Brow</span><span>&#10003; Waxing</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Treatments for healthy, radiant skin</h2><p>From relaxing facials to advanced collagen-induction microneedling, every treatment is customized to your skin and your goals.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#10024;</div><h3>Facial Treatments</h3><p>Customized facials, HydroDerm, oxygen dome, and hydrojelly masks to hydrate and glow.</p></div>
+    <div class="card"><div class="ic">&#129526;</div><h3>Chemical Peels</h3><p>Resurface and renew for brighter, smoother, more even-toned skin.</p></div>
+    <div class="card"><div class="ic">&#128137;</div><h3>Microneedling</h3><p>Collagen-induction therapy to firm, smooth, and refresh your complexion.</p></div>
+    <div class="card"><div class="ic">&#128064;</div><h3>Lash &amp; Brow</h3><p>Microblading, brow lamination, lash lifts, and tinting to frame your face.</p></div>
+    <div class="card"><div class="ic">&#129770;</div><h3>Waxing</h3><p>Gentle, thorough full-body and facial waxing for smooth, hair-free skin.</p></div>
+    <div class="card"><div class="ic">&#128722;</div><h3>Skincare Shop</h3><p>Take your results home with our curated professional skincare products.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Real Results</div><h2>Glowing, flawless skin</h2><p>Your real before-and-afters and treatment photos would fill this gallery, the visuals that turn followers into booked appointments.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://images.squarespace-cdn.com/content/v1/661606564399111753d4c1fa/64bc00b0-bad3-4b98-95b4-11e61138b51c/dreamstime_l_203680126.jpg" alt="Skin treatment"></div>
+    <div class="gitem"><img src="https://images.squarespace-cdn.com/content/v1/661606564399111753d4c1fa/af08b621-c711-4e9f-939b-cc04ee9771c9/ss6.jpg" alt="Skin Sational"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/facial,spa?lock=171" alt="Sample: facial"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/skincare?lock=172" alt="Sample: skincare"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/microneedling,skin?lock=173" alt="Sample: microneedling"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/eyebrows?lock=174" alt="Sample: brows"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/spa,facemask?lock=175" alt="Sample: mask"></div>
+    <div class="gitem">[ Your before/after ]</div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our clients say</h2><p>Your real Google &amp; Facebook reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My skin has never looked better. She customized everything to exactly what my skin needed and explained every step. I'm hooked!"</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The most relaxing facial, and my brows look perfect. Such a warm, welcoming little spa. Highly recommend!"</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Microneedling here was a game changer for my skin texture. Professional, gentle, and truly knowledgeable."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready for flawless skin?</h2>
+  <p>Book your customized treatment today. New clients always welcome, and our skincare experts can't wait to help you glow.</p>
+  <div class="cta"><a href="#" class="btn btn-rose">Book Online</a><a href="mailto:info@skintrx.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">SKIN SATIONAL SKIN CARE</div><p>Schaumburg's skin care experts and day spa. Customized facials, microneedling, chemical peels, lash &amp; brow, and waxing, plus a curated professional skincare shop. Every skin deserves to be flawless.</p></div>
+    <div><h4>Visit Us</h4><p>217 Meacham Rd<br>Schaumburg, IL 60193</p><a href="tel:6309779712">630-977-9712</a><a href="mailto:info@skintrx.com">info@skintrx.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

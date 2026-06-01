@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Classics | Friendly, Affordable Hair Salon in Streamwood, IL</title>
+<style>
+  :root{--ink:#1c1418;--char:#271a20;--wine:#8a2e46;--wine-dk:#73243a;--gold:#c39a55;--blush:#e7c3cd;--cream:#f7f1f0;--line:#ecdfe2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#211a1d;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-wine{background:var(--wine);color:#fff;box-shadow:0 6px 18px rgba(138,46,70,.34);}
+  .btn-wine:hover{background:var(--wine-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#dcc9cf;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(28,20,24,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:48px;width:auto;display:block;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:.5px;}
+  .logo .name small{display:block;font-weight:500;font-size:9.5px;color:#8c757c;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#473a40;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--wine);}
+  .hero{background:linear-gradient(rgba(22,14,18,.66),rgba(22,14,18,.78)),url('https://www.hairclassicsstreamwood.com/images/image1.jpg') center/cover no-repeat,linear-gradient(135deg,#3a1f2a,#1c1418);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(195,154,85,.22);color:#e7cd97;border:1px solid rgba(195,154,85,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#ddc8cf;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#bba5ac;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--wine);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--wine);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#6b5a61;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(28,20,24,.10);border-color:#e6d3d8;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6b5a61;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:190px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#8a2e46,#1c1418);border:1px solid #e6d3d8;display:flex;align-items:center;justify-content:center;color:#f3e6ea;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .book{background:linear-gradient(135deg,var(--ink),#3a1f2a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#ddc8cf;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#150f12;color:#bba5ac;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#bba5ac;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f24;padding-top:20px;text-align:center;font-size:13px;color:#8c757c;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Hair Classics by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here; some tiles are sample salon imagery, ready to swap</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Friendly &bull; Affordable &bull; Family</span> &nbsp; 1578 Buttitta Dr, Streamwood, IL 60107</div>
+  <div><span class="badge">Appointments &amp; Walk-ins: 630-830-1222</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://www.hairclassicsstreamwood.com/images/logo.gif" alt="Hair Classics"><div class="name">HAIR CLASSICS<small>Streamwood, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Salon</a><a href="#stylists">Stylists</a><a href="#book">Contact</a><a href="#book" class="btn btn-wine" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Your Neighborhood Salon Since Day One</span>
+  <h1>Great hair for the <span>whole family.</span></h1>
+  <p class="sub">Hair Classics is a friendly, affordable, full-service salon in Streamwood. Cuts, color, highlights, and perms for men, women, and kids, in a comfortable, welcoming atmosphere. Appointments preferred, walk-ins always welcome.</p>
+  <div class="cta"><a href="#book" class="btn btn-wine">Book an Appointment</a><a href="tel:6308301222" class="btn btn-ghost">Call 630-830-1222</a></div>
+  <div class="stats"><div class="s"><b>All Ages</b><span>Men, Women &amp; Kids</span></div><div class="s"><b>Walk-ins</b><span>Always Welcome</span></div><div class="s"><b>Top Brands</b><span>Redken, Matrix, GK</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Haircuts &amp; Styling</span><span>&#10003; Color &amp; Highlights</span><span>&#10003; Permanent Waves</span><span>&#10003; Kids' Cuts</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Quality hair care for everyone</h2><p>Our team listens to what you want and works together to create the best look for you, using trusted professional products.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#9986;</div><h3>Haircuts</h3><p>Precision cuts for men, women, and children of all ages and styles.</p></div>
+    <div class="card"><div class="ic">&#127912;</div><h3>Color</h3><p>Single-process color, gray coverage, and custom shades to suit you.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Highlights &amp; Balayage</h3><p>Dimensional highlights and lived-in color for a fresh, bright look.</p></div>
+    <div class="card"><div class="ic">&#127765;</div><h3>Permanent Waves</h3><p>Classic perms and texture services for body, curl, and movement.</p></div>
+    <div class="card"><div class="ic">&#128141;</div><h3>Styling &amp; Blowouts</h3><p>Special-occasion styling and blowouts that finish your look beautifully.</p></div>
+    <div class="card"><div class="ic">&#129528;</div><h3>Pro Products</h3><p>Redken, Matrix, Biolage, GK Hair, Moroccanoil, and more to take home.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Inside Hair Classics</div><h2>A warm, welcoming salon</h2><p>A look at our salon and the friendly team that has been keeping Streamwood looking great.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://www.hairclassicsstreamwood.com/images/2025%20-%20team%20row%20-%20cropped.png" alt="The Hair Classics team"></div>
+    <div class="gitem"><img src="https://www.hairclassicsstreamwood.com/images/image1.jpg" alt="Inside Hair Classics"></div>
+    <div class="gitem"><img src="https://www.hairclassicsstreamwood.com/images/image2.jpg" alt="Inside Hair Classics"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/haircut?lock=61" alt="Sample: haircut"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/haircolor?lock=62" alt="Sample: color"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/balayage?lock=63" alt="Sample: highlights"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/hairstyle?lock=64" alt="Sample: style"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/hair,salon?lock=65" alt="Sample: salon"></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready for a fresh look?</h2>
+  <p>Call us to book your appointment, or stop in, walk-ins are always welcome. We can't wait to see you at Hair Classics.</p>
+  <div class="cta"><a href="tel:6308301222" class="btn btn-wine">Call 630-830-1222</a><a href="#stylists" class="btn btn-ghost">Meet Our Stylists</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">HAIR CLASSICS</div><p>A friendly, affordable full-service hair salon in Streamwood, IL. Cuts, color, highlights, and perms for the whole family, in a comfortable, welcoming atmosphere.</p></div>
+    <div><h4>Visit Us</h4><p>1578 Buttitta Dr<br>Streamwood, IL 60107</p><a href="tel:6308301222">630-830-1222</a><p>Tue &amp; Thu til 8pm &bull; Sat til 4pm</p></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Salon</a><a href="#stylists">Stylists</a><a href="#book">Contact</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

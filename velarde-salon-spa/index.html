@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velardé Salon &amp; Spa | Hair, Nails, Skin &amp; Med Spa in Roselle, IL</title>
+<style>
+  :root{--ink:#1b1518;--char:#261c20;--rose:#b07a86;--rose-dk:#946270;--gold:#c6a06a;--blush:#e8cdd4;--cream:#f7f1f2;--line:#ece0e3;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#211a1d;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-rose{background:var(--rose);color:#fff;box-shadow:0 6px 18px rgba(176,122,134,.34);}
+  .btn-rose:hover{background:var(--rose-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#dcc9cf;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(27,21,24,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px;font-family:Georgia,serif;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:17px;line-height:1.1;letter-spacing:1px;font-family:Georgia,serif;}
+  .logo .name small{display:block;font-weight:500;font-size:9.5px;color:#8c747c;letter-spacing:2px;text-transform:uppercase;font-family:'Segoe UI',sans-serif;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#473a40;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--rose-dk);}
+  .hero{background:linear-gradient(rgba(24,16,20,.62),rgba(24,16,20,.74)),url('https://lirp.cdn-website.com/81b1a8c4/dms3rep/multi/opt/IMG_0898-541w.JPG') center/cover no-repeat,linear-gradient(135deg,#33232a,#1b1518);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(198,160,106,.22);color:#e7cd97;border:1px solid rgba(198,160,106,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:52px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;font-family:Georgia,serif;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#ddc8cf;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:28px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#b8a5ab;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--rose);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--rose-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;font-family:Georgia,serif;}
+  .sec-head p{color:#6b5a61;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(27,21,24,.10);border-color:#e6d3d8;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#6b5a61;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:190px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#b07a86,#1b1518);border:1px solid #e6d3d8;display:flex;align-items:center;justify-content:center;color:#f3e6ea;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#5f535a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--ink),#33232a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;font-family:Georgia,serif;}
+  .book p{color:#ddc8cf;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#160f12;color:#b8a5ab;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;font-family:Georgia,serif;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#b8a5ab;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f24;padding-top:20px;text-align:center;font-size:13px;color:#8c747c;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Velard&eacute; Salon &amp; Spa by Foundry Line &nbsp;&bull;&nbsp; Your real photos shown here; some tiles are sample imagery, ready to swap</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Salon &bull; Spa &bull; Med Spa</span> &nbsp; 54 Bokelman St, Roselle, IL 60172</div>
+  <div><span class="badge">Book: (847) 534-8778</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">V</div><div class="name">VELARD&Eacute;<small>Salon &bull; Spa</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-rose" style="padding:10px 22px;">Book Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Peace. Rejuvenation. Relaxation.</span>
+  <h1>Come in a stranger, <span>leave a friend.</span></h1>
+  <p class="sub">A full-service salon and spa in Roselle offering hair, nails, skincare, massage, makeup, and med spa services in a modern, relaxing atmosphere, complete with a complimentary coffee bar and treats.</p>
+  <div class="cta"><a href="#book" class="btn btn-rose">Book an Appointment</a><a href="tel:8475348778" class="btn btn-ghost">Call (847) 534-8778</a></div>
+  <div class="stats"><div class="s"><b>Full</b><span>Salon, Spa &amp; Med Spa</span></div><div class="s"><b>5.0&#9733;</b><span>Guest Rated</span></div><div class="s"><b>Coffee Bar</b><span>On the House</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Hair &amp; Color</span><span>&#10003; Nails</span><span>&#10003; Skincare &amp; Facials</span><span>&#10003; Massage</span><span>&#10003; Med Spa &amp; Botox</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Dedicated to enhancing your beauty</h2><p>Our stylists pay close attention to detail and listen to your wants and needs, our number one goal is that you leave 100% satisfied.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#9986;</div><h3>Hair</h3><p>Cuts, color, highlights, balayage, and styling by experienced stylists.</p></div>
+    <div class="card"><div class="ic">&#128141;</div><h3>Nails</h3><p>Manicures, pedicures, acrylics, dip powder, and French sets.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Skincare &amp; Facials</h3><p>Customized facials, peels, and clear-skin treatments for a healthy glow.</p></div>
+    <div class="card"><div class="ic">&#128150;</div><h3>Body &amp; Massage</h3><p>Relaxing back and chair massage to ease the daily grind.</p></div>
+    <div class="card"><div class="ic">&#128132;</div><h3>Makeup &amp; Lashes</h3><p>Wedding and special-occasion makeup, plus lash lift services.</p></div>
+    <div class="card"><div class="ic">&#128137;</div><h3>Med Spa</h3><p>Botox and aesthetic services, plus our signature permanent jewelry.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Work</div><h2>Quality work in a relaxing space</h2><p>A look inside Velard&eacute; and the styles our talented team creates every day.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://lirp.cdn-website.com/81b1a8c4/dms3rep/multi/opt/IMG_0913-541w.JPG" alt="Inside Velarde Salon"></div>
+    <div class="gitem"><img src="https://lirp.cdn-website.com/81b1a8c4/dms3rep/multi/opt/IMG_9970-541w.JPG" alt="Velarde Salon"></div>
+    <div class="gitem"><img src="https://lirp.cdn-website.com/81b1a8c4/dms3rep/multi/opt/IMG_0899-541w.JPG" alt="Velarde Salon"></div>
+    <div class="gitem"><img src="https://lirp.cdn-website.com/81b1a8c4/dms3rep/multi/opt/IMG_0898-541w.JPG" alt="Velarde Salon"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/haircolor?lock=151" alt="Sample: color"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/manicure?lock=152" alt="Sample: nails"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/facial,spa?lock=153" alt="Sample: facial"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/hairstyle?lock=154" alt="Sample: style"></div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our guests say</h2><p>Real reviews from Velard&eacute; guests.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Michelle V. did a great job on my highlights. Both super friendly ladies. Salon is beautiful and clean, pricing is very reasonable. I will definitely be going back."</p><div class="who">NIKKI G.</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Aly was amazing! First time coming to Velard&eacute; and I was not disappointed whatsoever. Their prices are awesome and everyone is so friendly. 10/10 recommend!"</p><div class="who">RACHEL J.</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"This location is super cute! I made an appointment for my nails with no issues at all. Nails came out perfect, thanks Mel! Definitely a place worth checking out."</p><div class="who">MARIA C.</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready to be pampered?</h2>
+  <p>Book online in under a minute, or call us, we can't wait to welcome you in and send you out feeling like a million bucks.</p>
+  <div class="cta"><a href="#" class="btn btn-rose">Book Online</a><a href="mailto:velardesalon00@yahoo.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">VELARD&Eacute; SALON &amp; SPA</div><p>A full-service salon, spa, and med spa in Roselle, IL. Hair, nails, skincare, massage, makeup, and aesthetics in a warm, welcoming space, where you come in a stranger and leave a friend.</p></div>
+    <div><h4>Visit Us</h4><p>54 Bokelman St<br>Roselle, IL 60172</p><a href="tel:8475348778">(847) 534-8778</a><a href="mailto:velardesalon00@yahoo.com">velardesalon00@yahoo.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#book">Book Now</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

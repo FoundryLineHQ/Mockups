@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roselle Service Center | Trusted Auto Repair in Roselle, IL Since 1984</title>
+<style>
+  :root{--ink:#10151c;--char:#171d26;--red:#c8341f;--red-dk:#a92a18;--steel:#7c8794;--gold:#e0a32b;--cream:#eef1f4;--line:#232a34;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#10151c;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:800;font-size:14.5px;letter-spacing:.6px;text-transform:uppercase;transition:.2s;cursor:pointer;}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(200,52,31,.34);}
+  .btn-red:hover{background:var(--red-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+  .topbar{background:#0a0e13;color:#aeb6c2;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:var(--char);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--red);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:54px;width:auto;display:block;background:#fff;border-radius:6px;padding:3px;}
+  .logo .name{color:#fff;font-weight:900;font-size:18px;letter-spacing:1px;line-height:1.1;}
+  .logo .name small{display:block;font-weight:500;font-size:10px;color:#9aa3b0;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:26px;align-items:center;}
+  .navlinks a{color:#d5dae1;font-weight:600;font-size:15px;}
+  .navlinks a:hover{color:#fff;}
+  .hero{background:linear-gradient(rgba(8,11,15,.78),rgba(8,11,15,.86)),url('https://du9m0k402rjmo.cloudfront.net/images/P_5608/092de24d-35d9-47d7-9474-e8c653b4503b.jpg') center/cover no-repeat,linear-gradient(135deg,#171d26,#10151c);color:#fff;}
+  .hero .wrap{padding:90px 24px 96px;}
+  .eyebrow{display:inline-block;background:rgba(200,52,31,.18);color:#f0a18f;border:1px solid rgba(200,52,31,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:54px;line-height:1.05;font-weight:900;max-width:740px;margin-bottom:18px;text-transform:uppercase;}
+  .hero h1 span{color:var(--gold);}
+  .hero p.sub{font-size:18px;color:#c2c9d2;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:50px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:900;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#9aa3b0;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--red);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:700;font-size:14.5px;text-transform:uppercase;letter-spacing:.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;}
+  .sec-head h2{font-size:38px;font-weight:900;color:var(--ink);margin:10px 0 14px;text-transform:uppercase;}
+  .sec-head p{color:#54606e;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid #e6e8ec;border-radius:12px;padding:30px 26px;transition:.2s;text-align:center;background:#fff;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(16,21,28,.12);border-color:var(--red);}
+  .card .ic{width:60px;height:60px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18px;color:var(--ink);margin-bottom:8px;text-transform:uppercase;letter-spacing:.4px;}
+  .card p{color:#54606e;font-size:15px;}
+  .gallery{background:var(--ink);}
+  .gallery .sec-head h2{color:#fff;} .gallery .sec-head p{color:#aeb6c2;}
+  .ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .gitem{height:210px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#c8341f,#10151c);border:1px solid #2a313c;display:flex;align-items:center;justify-content:center;color:#ffe9e1;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev{background:var(--cream);} .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid #e6e8ec;border-radius:12px;padding:26px;background:#fff;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#54606e;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:800;color:var(--ink);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--char),#23262d);color:#fff;text-align:center;}
+  .book h2{font-size:36px;font-weight:900;margin-bottom:12px;text-transform:uppercase;}
+  .book p{color:#c2c9d2;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#0b0e13;color:#9aa3b0;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:900;font-size:20px;margin-bottom:12px;letter-spacing:1px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#9aa3b0;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1c1e23;padding-top:20px;text-align:center;font-size:13px;color:#6a7380;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:38px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Roselle Service Center by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">ASE Certified</span> &nbsp; 309 E Irving Park Rd, Roselle, IL 60172</div>
+  <div><span class="badge">Trusted Since 1984</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://du9m0k402rjmo.cloudfront.net/images/P_5608/42963132-28f3-47d7-add9-21098de79d6b.jpg" alt="Roselle Service Center"><div class="name">ROSELLE SERVICE CENTER<small>Roselle, IL</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#shop">The Shop</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="tel:6308943737" class="btn btn-red" style="padding:10px 20px;">Call Now</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">The Area's Trusted Shop Since 1984</span>
+  <h1>Honest, reliable <span>auto repair.</span></h1>
+  <p class="sub">For all your automotive needs, Roselle Service Center has proudly served Roselle, Bloomingdale, Hanover Park, Hoffman Estates, and the surrounding communities with decades of experience and a commitment to honest, dependable service.</p>
+  <div class="cta"><a href="tel:6308943737" class="btn btn-red">Call (630) 894-3737</a><a href="#book" class="btn btn-ghost">Schedule a Visit</a></div>
+  <div class="stats"><div class="s"><b>40+</b><span>Years in Roselle</span></div><div class="s"><b>ASE</b><span>Certified Techs</span></div><div class="s"><b>All</b><span>Makes &amp; Models</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>Brakes</span><span>Transmission</span><span>A/C Service</span><span>Oil Changes</span><span>Engine Repair</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>A full range of automotive care</h2><p>From routine maintenance to major repairs, our ASE-certified team keeps your vehicle running safely and reliably.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#128679;</div><h3>Brake Repair</h3><p>Pads, rotors, lines, and complete brake service to keep you safe.</p></div>
+    <div class="card"><div class="ic">&#9881;&#65039;</div><h3>Transmission Work</h3><p>Diagnosis, service, and repair to keep your transmission shifting smoothly.</p></div>
+    <div class="card"><div class="ic">&#10052;&#65039;</div><h3>A/C Service</h3><p>Stay cool with full air conditioning diagnosis, recharge, and repair.</p></div>
+    <div class="card"><div class="ic">&#128738;</div><h3>Oil Changes &amp; Maintenance</h3><p>Fast, reliable oil changes and scheduled maintenance to prevent breakdowns.</p></div>
+    <div class="card"><div class="ic">&#128267;</div><h3>Batteries &amp; Electrical</h3><p>Battery replacement, headlights, and electrical diagnostics done right.</p></div>
+    <div class="card"><div class="ic">&#128295;</div><h3>Engine &amp; Suspension</h3><p>Engine repair, suspension, tires, and everything in between.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="shop"><div class="wrap">
+  <div class="sec-head"><div class="k">Inside the Shop</div><h2>Experience you can trust</h2><p>A look at the clean, professional shop that Roselle drivers have relied on for over 40 years.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://du9m0k402rjmo.cloudfront.net/images/P_5608/a9e34a0c-100c-4104-9fb0-86bfc0d615da.jpg" alt="Roselle Service Center"></div>
+    <div class="gitem"><img src="https://du9m0k402rjmo.cloudfront.net/images/P_5608/cd97849a-2d85-43bd-996f-b3b98bd31a08.jpg" alt="Roselle Service Center"></div>
+    <div class="gitem"><img src="https://du9m0k402rjmo.cloudfront.net/images/P_5608/ef92031a-93d1-4725-80c2-40e6fafd45a5.jpg" alt="Roselle Service Center"></div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our customers say</h2><p>Your real Google reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Honest, fair, and they always explain what needs to be done. I've trusted them with my cars for years."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Quality work at a fair price, and they never try to sell you things you don't need. A real neighborhood shop."</p><div class="who">[ Real review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Been coming here for decades. Reliable, friendly, and they get it done right the first time."</p><div class="who">[ Real review pulls in here ]</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Need a trusted mechanic?</h2>
+  <p>Call to schedule your appointment, or stop by. We're here Monday through Friday and Saturday mornings, ready to keep you safely on the road.</p>
+  <div class="cta"><a href="tel:6308943737" class="btn btn-red">Call (630) 894-3737</a><a href="mailto:mark@roselleservicecenter.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">ROSELLE SERVICE CENTER</div><p>Roselle's trusted auto repair and service shop since 1984. Honest, reliable, ASE-certified service for all makes and models, serving Roselle and the surrounding communities.</p></div>
+    <div><h4>Visit Us</h4><p>309 E Irving Park Rd<br>Roselle, IL 60172</p><a href="tel:6308943737">(630) 894-3737</a><a href="mailto:mark@roselleservicecenter.com">mark@roselleservicecenter.com</a></div>
+    <div><h4>Hours</h4><p>Mon&ndash;Thu: 7:30a&ndash;5:45p<br>Fri: 7:30a&ndash;5:30p<br>Sat: 8a&ndash;11a</p></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

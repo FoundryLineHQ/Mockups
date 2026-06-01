@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wood Dale Dental | Dr. Lerias | Family Dentist in Wood Dale, IL</title>
+<style>
+  :root{--ink:#0d2433;--navy:#14405c;--teal:#2b86c4;--teal-dk:#236ca0;--gold:#c9a24b;--sky:#bcd9f0;--cream:#eef4f9;--line:#dbe6f0;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#152431;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(43,134,196,.34);}
+  .btn-teal:hover{background:var(--teal-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#b6ccdd;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(13,36,51,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:52px;width:auto;display:block;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#36505f;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--teal-dk);}
+  .hero{background:linear-gradient(rgba(11,30,46,.7),rgba(11,30,46,.8)),url('https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/getthesmile1_1_orig.jpg') center/cover no-repeat,linear-gradient(135deg,#16456a,#0d2433);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(43,134,196,.26);color:#bcd9f0;border:1px solid rgba(43,134,196,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sky);}
+  .hero p.sub{font-size:18px;color:#c8dae8;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:28px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#a3b8c8;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--teal);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--teal-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--navy);margin:10px 0 14px;}
+  .sec-head p{color:#52677a;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(13,36,51,.10);border-color:#cbe0ef;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--navy);margin-bottom:8px;}
+  .card p{color:#52677a;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#2b86c4,#0d2433);border:1px solid #cbe0ef;display:flex;align-items:center;justify-content:center;color:#dfeaf6;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev .cards{grid-template-columns:repeat(2,1fr);}
+  .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#4f6273;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--navy);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--ink),#16456a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#c8dae8;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#0a1d29;color:#a3b8c8;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#a3b8c8;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #16303d;padding-top:20px;text-align:center;font-size:13px;color:#738a9a;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Wood Dale Dental by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Family Dentistry Since the 1980s</span> &nbsp; 142 W Irving Park Rd, Wood Dale, IL 60191</div>
+  <div><span class="badge">Now Accepting New Patients: (630) 766-3840</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/published/1474921122.png" alt="Wood Dale Dental"></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Smiles</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-teal" style="padding:10px 22px;">New Patients</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">We Are Local. We Are Personal.</span>
+  <h1>We are <span>your</span> dentist.</h1>
+  <p class="sub">For more than 40 years, Wood Dale Dental has provided quality dental care to generations of families. From cleanings to emergency care, Dr. Lerias and our team work with you every step of the way to get the smile you want and love.</p>
+  <div class="cta"><a href="#book" class="btn btn-teal">Become a New Patient</a><a href="tel:6307663840" class="btn btn-ghost">Call (630) 766-3840</a></div>
+  <div class="stats"><div class="s"><b>40+</b><span>Years in Wood Dale</span></div><div class="s"><b>All Ages</b><span>Generations of Families</span></div><div class="s"><b>Sat</b><span>Saturday Hours</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Family &amp; Children</span><span>&#10003; Cosmetic &amp; Invisalign</span><span>&#10003; Implants &amp; Crowns</span><span>&#10003; Emergency Care</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Complete care for the whole family</h2><p>From routine cleanings to cosmetic and emergency care, we provide the highest quality dentistry for children and adults alike.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129463;</div><h3>General Dentistry</h3><p>Cleanings, fillings, crowns, root canals, and periodontal care for all ages.</p></div>
+    <div class="card"><div class="ic">&#129701;</div><h3>Children's Dentistry</h3><p>Gentle, friendly care that helps kids build healthy habits for life.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Cosmetic Dentistry</h3><p>Teeth whitening, porcelain veneers, and crowns for a brighter smile.</p></div>
+    <div class="card"><div class="ic">&#128556;</div><h3>Invisalign</h3><p>Clear, comfortable aligners to straighten your smile discreetly.</p></div>
+    <div class="card"><div class="ic">&#129528;</div><h3>Implants &amp; Dentures</h3><p>Natural-looking tooth replacement to restore your smile and bite.</p></div>
+    <div class="card"><div class="ic">&#128222;</div><h3>Emergency Dental</h3><p>In pain? We're here to help you the same day, with gentle care.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Real Smiles</div><h2>Experience you can trust</h2><p>A look at the comfortable, painless care that has kept Wood Dale families smiling for over 40 years.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/drlerias-web-right_orig.jpg" alt="Dr. Lerias"></div>
+    <div class="gitem"><img src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/kids_orig.jpg" alt="Children's dentistry"></div>
+    <div class="gitem"><img src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/zoomwhitening_orig.jpg" alt="Teeth whitening"></div>
+    <div class="gitem"><img src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/invisalign_orig.jpg" alt="Invisalign"></div>
+    <div class="gitem"><img src="https://www.wooddaledentistry.com/uploads/8/6/8/6/86860258/getthesmile1_1_orig.jpg" alt="Healthy smile"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dental,clinic?lock=141" alt="Sample: office"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dental,hygienist?lock=142" alt="Sample: hygienist"></div>
+    <div class="gitem">[ Your office / team photo ]</div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our patients say</h2><p>Real reviews from Wood Dale Dental patients.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I have had dental work both here and abroad. Every time I went in, it hurt. Then I met Dr. Lerias... It was completely painless and I am very grateful."</p><div class="who">VICTORIA Q.</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I had a severe case of dental phobia until I met and was treated by Dr. Lerias... the procedure was uneventful and future cleanings will no longer be a concern. Thank you Dr. Lerias and staff!"</p><div class="who">JENNIFER P.</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Experience true family dental care</h2>
+  <p>We're now accepting new patients of all ages. Call our friendly Wood Dale team to schedule your first visit, evening and Saturday hours available.</p>
+  <div class="cta"><a href="tel:6307663840" class="btn btn-teal">Call (630) 766-3840</a><a href="#services" class="btn btn-ghost">View Our Services</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">WOOD DALE DENTAL</div><p>Local, personal family dentistry in Wood Dale, IL for over 40 years. From children's care to cosmetic, implants, and emergencies, Dr. Lerias and our team are your dentist for life.</p></div>
+    <div><h4>Visit Us</h4><p>142 W Irving Park Rd<br>Wood Dale, IL 60191</p><a href="tel:6307663840">(630) 766-3840</a><p>Evening &amp; Saturday hours</p></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Smiles</a><a href="#reviews">Reviews</a><a href="#book">New Patients</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

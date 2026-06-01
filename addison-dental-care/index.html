@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Addison Dental Care | Dr. Krysta Lilland | Family Dentist in Addison, IL</title>
+<style>
+  :root{--ink:#1a1216;--char:#241a1f;--maroon:#ad0037;--maroon-dk:#8a002c;--gold:#c9a24b;--blush:#f0b9c8;--cream:#f8f0f2;--line:#ecdde2;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f161a;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-maroon{background:var(--maroon);color:#fff;box-shadow:0 6px 18px rgba(173,0,55,.32);}
+  .btn-maroon:hover{background:var(--maroon-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#e0c8d0;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(26,18,22,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:48px;width:auto;display:block;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#473a40;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--maroon);}
+  .hero{background:linear-gradient(rgba(24,12,18,.72),rgba(24,12,18,.82)),url('https://loremflickr.com/1200/600/dentist,smile?lock=121') center/cover no-repeat,linear-gradient(135deg,#3a0f24,#1a1216);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(173,0,55,.26);color:#f0b9c8;border:1px solid rgba(173,0,55,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--blush);}
+  .hero p.sub{font-size:18px;color:#e3d0d6;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:28px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#c4aab2;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--maroon);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--maroon);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--ink);margin:10px 0 14px;}
+  .sec-head p{color:#67585e;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,18,22,.10);border-color:#e6d3d9;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--ink);margin-bottom:8px;}
+  .card p{color:#67585e;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:180px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#ad0037,#1a1216);border:1px solid #e6d3d9;display:flex;align-items:center;justify-content:center;color:#f3e1e6;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#5f535a;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--ink);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--ink),#3a0f24);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#e3d0d6;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#150e11;color:#c4aab2;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#c4aab2;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #2a1f24;padding-top:20px;text-align:center;font-size:13px;color:#8c757e;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Addison Dental Care by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; reviews shown here; photos are sample imagery, ready to swap for yours</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Full-Service Dentistry for 20+ Years</span> &nbsp; 1201 W Army Trail Blvd #2, Addison, IL 60101</div>
+  <div><span class="badge">New Patients: 630-543-8688</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://addisondentalil.com/wp-content/uploads/2018/09/Addison_logo_300x102.png" alt="Addison Dental Care"></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-maroon" style="padding:10px 22px;">Make an Appointment</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Extraordinary Dental Care, Addison</span>
+  <h1>You're at the <span>center</span> of everything we do.</h1>
+  <p class="sub">Dr. Krysta Lilland and the Addison Dental Care team provide warm, family-focused, personalized dentistry, from preventive care to cosmetic and restorative treatments. A vital part of Addison and the surrounding area for over 20 years.</p>
+  <div class="cta"><a href="#book" class="btn btn-maroon">Make an Appointment</a><a href="tel:6305438688" class="btn btn-ghost">Call 630-543-8688</a></div>
+  <div class="stats"><div class="s"><b>20+</b><span>Years in Addison</span></div><div class="s"><b>5.0&#9733;</b><span>Patient Rated</span></div><div class="s"><b>9 PPOs</b><span>Most Plans Accepted</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Preventive &amp; Cleanings</span><span>&#10003; Cosmetic Dentistry</span><span>&#10003; Restorative Care</span><span>&#10003; Financing Available</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Family-focused, personalized treatment</h2><p>We provide the general dentistry services you need along with the cosmetic and restorative treatments you want, in a warm, friendly practice focused on you.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129463;</div><h3>Preventive Care</h3><p>Cleanings, exams, and gentle care to keep your whole family healthy.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Cosmetic Dentistry</h3><p>Whitening, veneers, and smile makeovers for a brighter, confident look.</p></div>
+    <div class="card"><div class="ic">&#128137;</div><h3>Restorative Dentistry</h3><p>Crowns, bridges, partials, and fillings that restore comfort and function.</p></div>
+    <div class="card"><div class="ic">&#129701;</div><h3>Family Dentistry</h3><p>Warm, welcoming care for every age, where they remember your name.</p></div>
+    <div class="card"><div class="ic">&#128176;</div><h3>Flexible Financing</h3><p>Nine major PPOs accepted plus CareCredit financing to spread payments.</p></div>
+    <div class="card"><div class="ic">&#128222;</div><h3>Comfortable Care</h3><p>Nervous about the dentist? Dr. Lilland's gentle, caring team puts you at ease.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="about"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Office</div><h2>Like part of our family</h2><p>From the moment you step through the door, you'll feel the warm, friendly atmosphere that keeps patients recommending us.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dentist?lock=122" alt="Sample: dental care"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dental,clinic?lock=123" alt="Sample: office"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dental,smile?lock=124" alt="Sample: smile"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/teeth?lock=125" alt="Sample: teeth"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dental,hygienist?lock=126" alt="Sample: hygienist"></div>
+    <div class="gitem"><img src="https://loremflickr.com/600/400/dentistoffice?lock=127" alt="Sample: office"></div>
+    <div class="gitem">[ Your office photo ]</div>
+    <div class="gitem">[ Dr. Lilland &amp; team ]</div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our patients say</h2><p>Real reviews from Addison Dental Care patients.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Dr. Lilland is honestly the best dentist I've ever met. She's very personable, professional and competent, and her staff are all equally helpful."</p><div class="who">TRACI B.</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My whole family comes here and I love that they actually remember you. It makes you feel like you're catching up with an old friend every time!"</p><div class="who">MAGDALENA U.</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Great dentist and staff. Treat you like family. Always a wonderful experience! Highly recommend."</p><div class="who">JOE S.</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready for your visit?</h2>
+  <p>We welcome new patients and most insurance plans. Make an appointment online in under a minute, or call our friendly Addison team.</p>
+  <div class="cta"><a href="#" class="btn btn-maroon">Make an Appointment</a><a href="mailto:info@addisondentalil.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">ADDISON DENTAL CARE</div><p>Warm, family-focused dentistry with Dr. Krysta Lilland, a vital part of Addison for over 20 years. Preventive, cosmetic, and restorative care, with you at the center of everything we do.</p></div>
+    <div><h4>Visit Us</h4><p>1201 W Army Trail Blvd #2<br>Addison, IL 60101</p><a href="tel:6305438688">630-543-8688</a><a href="mailto:info@addisondentalil.com">info@addisondentalil.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#book">Make an Appointment</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

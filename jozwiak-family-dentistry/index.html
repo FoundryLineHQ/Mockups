@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jozwiak Family Dentistry | Family &amp; Cosmetic Dentist in Schaumburg, IL</title>
+<style>
+  :root{--ink:#10243a;--navy:#15324f;--teal:#2f9c93;--teal-dk:#26817a;--gold:#c9a24b;--sky:#9fd3cf;--cream:#eef5f4;--line:#dde8e6;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#16202b;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(47,156,147,.34);}
+  .btn-teal:hover{background:var(--teal-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#bcd2da;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(16,36,58,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo img.brand{height:48px;width:auto;display:block;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#3a4a59;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--teal-dk);}
+  .hero{background:linear-gradient(rgba(13,30,48,.72),rgba(13,30,48,.82)),url('https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-home-banner-final.jpg') center/cover no-repeat,linear-gradient(135deg,#1d3e5c,#10243a);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(47,156,147,.24);color:#9fd3cf;border:1px solid rgba(47,156,147,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sky);}
+  .hero p.sub{font-size:18px;color:#cfdde2;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:30px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#a9bcc4;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--teal);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--teal-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--navy);margin:10px 0 14px;}
+  .sec-head p{color:#566872;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(16,36,58,.10);border-color:#cfe2df;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--navy);margin-bottom:8px;}
+  .card p{color:#566872;font-size:15px;}
+  .gallery{background:var(--cream);}
+  .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .gitem{height:200px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#2f9c93,#10243a);border:1px solid #cfe2df;display:flex;align-items:center;justify-content:center;color:#eef5f4;font-size:12.5px;font-style:italic;text-align:center;padding:14px;}
+  .gitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .rev .cards{grid-template-columns:repeat(3,1fr);}
+  .review{border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#516069;font-size:15px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--navy);font-size:14px;letter-spacing:.5px;}
+  .book{background:linear-gradient(135deg,var(--ink),#1d3e5c);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#cfdde2;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  footer{background:#0c1b2b;color:#a9bcc4;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#a9bcc4;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #1a2c3d;padding-top:20px;text-align:center;font-size:13px;color:#7990a0;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.ggrid,.rev .cards{grid-template-columns:1fr 1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW MOCKUP &nbsp;&bull;&nbsp; Designed for Jozwiak Family Dentistry by Foundry Line &nbsp;&bull;&nbsp; Your real logo &amp; photos shown here, everything is fully editable</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Family &amp; Cosmetic Dentistry</span> &nbsp; 752 E Schaumburg Rd, Schaumburg, IL 60194</div>
+  <div><span class="badge">New Patients Welcome: (847) 843-7797</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><img class="brand" src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-logo.jpg" alt="Jozwiak Family Dentistry"></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#gallery">Smile Gallery</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-teal" style="padding:10px 22px;">Request Appointment</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Your Home for Amazing Dental Care</span>
+  <h1>A healthier smile, <span>made comfortable.</span></h1>
+  <p class="sub">Drs. Tom and Kevin Jozwiak deliver skilled, patient-centered family and cosmetic dentistry in Schaumburg. Preventive, restorative, and cosmetic care for every age, in one welcoming office.</p>
+  <div class="cta"><a href="#book" class="btn btn-teal">Request an Appointment</a><a href="tel:8478437797" class="btn btn-ghost">Call (847) 843-7797</a></div>
+  <div class="stats"><div class="s"><b>2</b><span>Dentists, One Family</span></div><div class="s"><b>All Ages</b><span>New Patients Welcome</span></div><div class="s"><b>Sat</b><span>Saturday Hours</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Preventive Care</span><span>&#10003; Cosmetic Dentistry</span><span>&#10003; Dental Implants</span><span>&#10003; Most Insurance Accepted</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Comprehensive dentistry, all in one place</h2><p>From routine cleanings to full smile makeovers, we provide a wide range of care so you never have to go far.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129463;</div><h3>Preventive Dentistry</h3><p>Cleanings, exams, hygiene, sealants, and oral cancer screenings to keep smiles healthy.</p></div>
+    <div class="card"><div class="ic">&#129701;</div><h3>Children's Dentistry</h3><p>Gentle, friendly care that helps kids build healthy habits for life.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Cosmetic Dentistry</h3><p>Porcelain veneers, teeth whitening, and bonding for a confident, brighter smile.</p></div>
+    <div class="card"><div class="ic">&#129463;</div><h3>Restorative Dentistry</h3><p>Dental implants, crowns, bridges, and tooth-colored fillings that look natural.</p></div>
+    <div class="card"><div class="ic">&#129516;</div><h3>Periodontics</h3><p>Gum disease diagnosis and deep cleaning to protect your long-term health.</p></div>
+    <div class="card"><div class="ic">&#128137;</div><h3>Oral Surgery</h3><p>Extractions and oral surgery handled comfortably, right here in our office.</p></div>
+  </div>
+</div></section>
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="sec-head"><div class="k">Smile Gallery</div><h2>Real smiles, real care</h2><p>A look at our office and the smiles we help create every day.</p></div>
+  <div class="ggrid">
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-smile-gallery-one.png" alt="Smile gallery"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-smile-gallery-two.png" alt="Smile gallery"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-smile-gallery-three.png" alt="Smile gallery"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-smile-gallery-four.png" alt="Smile gallery"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-comprehensive-dentistry-1.jpg" alt="Comprehensive dentistry"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-individual-care-1.jpg" alt="Individual care"></div>
+    <div class="gitem"><img src="https://familydentistschaumburg.com/wp-content/uploads/2023/05/family-dentist-schaumburg-768x1024.jpg" alt="Cosmetic dentistry"></div>
+    <div class="gitem">[ Your office / team photo ]</div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our patients say</h2><p>Your real Google reviews would display here automatically.</p></div>
+  <div class="cards">
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The whole team is warm and gentle, and they explain everything. Best dental experience I've had."</p><div class="who">[ Real Google review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Both Dr. Jozwiaks are wonderful. My whole family sees them and we wouldn't go anywhere else."</p><div class="who">[ Real Google review pulls in here ]</div></div>
+    <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Friendly staff, easy scheduling, and they truly care about your comfort. Highly recommend."</p><div class="who">[ Real Google review pulls in here ]</div></div>
+  </div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready for your visit?</h2>
+  <p>We welcome new patients of all ages. Request an appointment online in under a minute, or call our office and our friendly team will help.</p>
+  <div class="cta"><a href="#" class="btn btn-teal">Request an Appointment</a><a href="tel:8478437797" class="btn btn-ghost">Call (847) 843-7797</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">JOZWIAK FAMILY DENTISTRY</div><p>Family and cosmetic dentistry in Schaumburg, IL with Drs. Tom and Kevin Jozwiak. Patient-centered preventive, restorative, and cosmetic care for every age.</p></div>
+    <div><h4>Visit Us</h4><p>752 E Schaumburg Rd<br>Schaumburg, IL 60194</p><a href="tel:8478437797">(847) 843-7797</a><a href="mailto:Jozwiakfamilydentistry@gmail.com">Jozwiakfamilydentistry@gmail.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#gallery">Smile Gallery</a><a href="#reviews">Reviews</a><a href="#book">Request Appointment</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>

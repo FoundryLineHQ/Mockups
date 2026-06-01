@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glendale Heights Family Dental | Dr. Bhumika Patel | Glendale Heights, IL</title>
+<style>
+  :root{--ink:#0e2a36;--navy:#13414f;--teal:#19a3a8;--teal-dk:#14868a;--gold:#c9a24b;--sky:#a9e3e6;--cream:#eef7f7;--line:#daebec;--white:#fff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#152a31;line-height:1.6;background:#fff;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  a{text-decoration:none;color:inherit;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14.5px;letter-spacing:.4px;transition:.2s;cursor:pointer;}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(25,163,168,.34);}
+  .btn-teal:hover{background:var(--teal-dk);transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+  .topbar{background:var(--ink);color:#b6d2d6;font-size:13.5px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;}
+  .topbar .badge{color:#fff;font-weight:600;}
+  header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(14,42,54,.07);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo .mark{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:15px;letter-spacing:.5px;}
+  .logo .name{color:var(--ink);font-weight:800;font-size:16px;line-height:1.15;letter-spacing:.3px;}
+  .logo .name small{display:block;font-weight:500;font-size:9.5px;color:#7c969d;letter-spacing:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:24px;align-items:center;}
+  .navlinks a{color:#36545d;font-weight:600;font-size:14.5px;}
+  .navlinks a:hover{color:var(--teal-dk);}
+  .hero{background:linear-gradient(rgba(12,36,46,.72),rgba(12,36,46,.82)),url('https://loremflickr.com/1200/600/dentist,smile?lock=161') center/cover no-repeat,linear-gradient(135deg,#15495a,#0e2a36);color:#fff;}
+  .hero .wrap{padding:92px 24px 98px;}
+  .eyebrow{display:inline-block;background:rgba(25,163,168,.26);color:#a9e3e6;border:1px solid rgba(25,163,168,.5);padding:6px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:50px;line-height:1.1;font-weight:800;max-width:720px;margin-bottom:18px;}
+  .hero h1 span{color:var(--sky);}
+  .hero p.sub{font-size:18px;color:#c6dde0;max-width:580px;margin-bottom:30px;}
+  .hero .cta{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero .stats{display:flex;gap:46px;margin-top:52px;flex-wrap:wrap;}
+  .hero .stats .s b{display:block;font-size:28px;font-weight:800;color:#fff;}
+  .hero .stats .s span{font-size:12px;color:#a3bcc1;text-transform:uppercase;letter-spacing:1.5px;}
+  .trust{background:var(--teal);color:#fff;}
+  .trust .wrap{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;padding:16px 24px;font-weight:600;font-size:14.5px;}
+  section{padding:80px 0;}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 50px;}
+  .sec-head .k{color:var(--teal-dk);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;}
+  .sec-head h2{font-size:37px;font-weight:800;color:var(--navy);margin:10px 0 14px;}
+  .sec-head p{color:#52686f;font-size:17px;}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:.2s;text-align:center;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(14,42,54,.10);border-color:#cbe6e7;}
+  .card .ic{width:60px;height:60px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;}
+  .card h3{font-size:18.5px;color:var(--navy);margin-bottom:8px;}
+  .card p{color:#52686f;font-size:15px;}
+  .team{background:var(--cream);}
+  .team .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .doc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;text-align:center;}
+  .doc .ph{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 16px;background:linear-gradient(135deg,#a9e3e6,#19a3a8);}
+  .doc .ph img{width:100%;height:100%;object-fit:cover;display:block;}
+  .doc h3{font-size:18px;color:var(--navy);}
+  .doc span{font-size:13.5px;color:#7c969d;}
+  .book{background:linear-gradient(135deg,var(--ink),#15495a);color:#fff;text-align:center;}
+  .book h2{font-size:35px;font-weight:800;margin-bottom:12px;}
+  .book p{color:#c6dde0;font-size:18px;max-width:560px;margin:0 auto 28px;}
+  .book .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .rev .review{border:1px solid var(--line);border-radius:16px;padding:26px;max-width:760px;margin:0 auto;}
+  .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px;}
+  .review p{color:#4f656c;font-size:16px;font-style:italic;margin-bottom:14px;}
+  .review .who{font-weight:700;color:var(--navy);font-size:14px;letter-spacing:.5px;}
+  footer{background:#0b212b;color:#a3bcc1;padding:54px 0 26px;}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+  footer .name{color:#fff;font-weight:800;font-size:19px;margin-bottom:12px;letter-spacing:.5px;}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;}
+  footer p,footer a{font-size:14.5px;color:#a3bcc1;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid #16323d;padding-top:20px;text-align:center;font-size:13px;color:#739099;}
+  .mocknote{background:#fff8e6;border:1px solid #f3d488;color:#7a5b12;text-align:center;padding:10px;font-size:13px;font-weight:600;}
+  @media(max-width:880px){.cards,.team .grid{grid-template-columns:1fr;}.hero h1{font-size:37px;}.navlinks{display:none;}}
+</style>
+</head>
+<body>
+<div class="mocknote">PREVIEW CONCEPT &nbsp;&bull;&nbsp; A fresh design concept for Glendale Heights Family Dental by Foundry Line &nbsp;&bull;&nbsp; Your real doctor photos shown here</div>
+<div class="topbar"><div class="wrap">
+  <div><span class="badge">Family &amp; Cosmetic Dentistry</span> &nbsp; 1177 Bloomingdale Rd, Ste B, Glendale Heights, IL 60139</div>
+  <div><span class="badge">Saturday Appointments &bull; (630) 866-6000</span></div>
+</div></div>
+<header><nav class="wrap">
+  <div class="logo"><div class="mark">GHF</div><div class="name">GLENDALE HEIGHTS<small>Family Dental</small></div></div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#team">Our Doctors</a><a href="#reviews">Reviews</a><a href="#book">Contact</a><a href="#book" class="btn btn-teal" style="padding:10px 22px;">Book Appointment</a></div>
+</nav></header>
+<section class="hero" style="padding:0;"><div class="wrap">
+  <span class="eyebrow">Your Smile, Our Priority</span>
+  <h1>Comfortable, modern <span>family dentistry.</span></h1>
+  <p class="sub">Welcome to the office of Dr. Bhumika Patel. We offer a relaxing, comfortable environment and affordable payment options, with comprehensive general and cosmetic care for patients of all ages in Glendale Heights.</p>
+  <div class="cta"><a href="#book" class="btn btn-teal">Book an Appointment</a><a href="tel:6308666000" class="btn btn-ghost">Call (630) 866-6000</a></div>
+  <div class="stats"><div class="s"><b>Bioclear</b><span>Certified</span></div><div class="s"><b>Saturday</b><span>Appointments</span></div><div class="s"><b>Bilingual</b><span>Friendly Team</span></div></div>
+</div></div></section>
+<div class="trust"><div class="wrap"><span>&#10003; Family Dentistry</span><span>&#10003; Cosmetic &amp; Veneers</span><span>&#10003; Dental Implants</span><span>&#10003; Modern Technology</span></div></div>
+<section id="services"><div class="wrap">
+  <div class="sec-head"><div class="k">Our Services</div><h2>Comprehensive care for every smile</h2><p>Comfortable office, affordable dentistry, emergency care, and modern technology, with a bilingual team and a convenient location.</p></div>
+  <div class="cards">
+    <div class="card"><div class="ic">&#129463;</div><h3>Dental Crowns</h3><p>Custom crowns that restore strength, function, and a natural look.</p></div>
+    <div class="card"><div class="ic">&#129528;</div><h3>Dental Implants</h3><p>Permanent, natural-looking replacements for missing teeth.</p></div>
+    <div class="card"><div class="ic">&#10024;</div><h3>Porcelain Veneers</h3><p>Transform your smile with custom, natural-looking veneers.</p></div>
+    <div class="card"><div class="ic">&#129701;</div><h3>Teeth Whitening</h3><p>Brighten your smile with safe, professional whitening.</p></div>
+    <div class="card"><div class="ic">&#128138;</div><h3>Bioclear Restorations</h3><p>Dr. Patel's advanced Bioclear technique for beautiful, conservative results.</p></div>
+    <div class="card"><div class="ic">&#128222;</div><h3>Emergency Care</h3><p>In pain? We'll do our best to see you quickly and get you comfortable.</p></div>
+  </div>
+</div></section>
+<section class="team" id="team"><div class="wrap">
+  <div class="sec-head"><div class="k">Meet Our Doctors</div><h2>Experienced &amp; friendly</h2></div>
+  <div class="grid">
+    <div class="doc"><div class="ph"><img src="https://d3t5ai5vcxyqte.cloudfront.net/media/twiysuseiuhrj.webp" alt="Dr. Bhumika Patel"></div><h3>Dr. Bhumika Patel</h3><span>General Dentist &amp; Owner</span></div>
+    <div class="doc"><div class="ph"><img src="https://d3t5ai5vcxyqte.cloudfront.net/media/shsssvmjevpjntmtvzc.webp" alt="Dr. Samer Elbatanouny"></div><h3>Dr. Samer Elbatanouny</h3><span>General Dentist</span></div>
+    <div class="doc"><div class="ph"><img src="https://d3t5ai5vcxyqte.cloudfront.net/media/igtsrmatpzui.webp" alt="Dr. Amina Quadri"></div><h3>Dr. Amina Quadri</h3><span>General Dentist</span></div>
+  </div>
+</div></section>
+<section class="rev" id="reviews"><div class="wrap">
+  <div class="sec-head"><div class="k">Reviews</div><h2>What our patients say</h2></div>
+  <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Dr. Bhumika and her staff are absolutely amazing. Not only are they professional, they make you feel so comfortable from the minute you walk in. Their office also has Saturday appointments which makes it so much more convenient. I recommend this office to anyone looking for an amazing dentist with amazing staff."</p><div class="who">MARIELLA B.</div></div>
+</div></section>
+<section class="book" id="book"><div class="wrap">
+  <h2>Ready for your visit?</h2>
+  <p>We welcome new patients of all ages, with Saturday appointments and a relaxing, comfortable office. Book online or call our friendly team.</p>
+  <div class="cta"><a href="#" class="btn btn-teal">Book an Appointment</a><a href="mailto:office@ghfdental.com" class="btn btn-ghost">Email Us</a></div>
+</div></section>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="name">GLENDALE HEIGHTS FAMILY DENTAL</div><p>Comfortable, modern family and cosmetic dentistry with Dr. Bhumika Patel and team. Comprehensive care for all ages, Bioclear certified, with Saturday appointments and a bilingual, friendly staff.</p></div>
+    <div><h4>Visit Us</h4><p>1177 Bloomingdale Rd, Ste B<br>Glendale Heights, IL 60139</p><a href="tel:6308666000">(630) 866-6000</a><a href="mailto:office@ghfdental.com">office@ghfdental.com</a></div>
+    <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#team">Our Doctors</a><a href="#reviews">Reviews</a><a href="#book">Book Appointment</a></div>
+  </div>
+  <div class="fbar">Concept mockup prepared by Foundry Line &bull; FoundryLineHQ@gmail.com &bull; Not the live site</div>
+</div></footer>
+</body>
+</html>
